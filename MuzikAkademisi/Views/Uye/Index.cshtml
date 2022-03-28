@@ -1,0 +1,62 @@
+﻿@using MuzikAkademisi.Entities.Model
+@model List<Uye>
+@{ ViewBag.Title = "Index";
+   Layout = "~/Views/Shared/_AnasayfaLayout.cshtml"; 
+    }
+<html>
+<head>
+    <style>
+        #islem {
+            background-color: palevioletred;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="font-family:'Century Gothic'">
+
+        <div style="text-align: center; color: black; background-color: palevioletred;margin-bottom:5px">
+            <h2><b> Üyeler </b></h2>
+        </div>
+
+        <table class="table table-bordered" style=" text-align: center; padding:10px 20px;">
+            <thead style=" color: black; background-color: palevioletred;">
+                <tr>
+                    <th style="padding: 10px 150px 10px 150px;">Id</th>
+                    <th style="padding: 10px 150px 10px 150px;">Uye Adı</th>
+                    <th style="padding: 10px 150px 10px 150px;">Uye Soyadı</th>
+                    <th style="padding: 10px 150px 10px 150px;">Uye Cinsiyet</th>
+                    <th style="padding: 10px 150px 10px 150px;">İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Uye uye in Model)
+                {
+                    
+    <tr>
+
+        <th>@uye.UyeId</th>
+        <th>@uye.UyeAdi</th>
+        <th>@uye.UyeSoyadi</th>
+        <th>@uye.UyeCinsiyet</th>
+        <th>
+            <a id="islem" href="/Uye/Sil/@uye.UyeId">Sil</a>&nbsp;
+            <a id="islem" href="/Uye/Guncelle/@uye.UyeId">Güncelle</a>
+        </th>
+    </tr>}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+

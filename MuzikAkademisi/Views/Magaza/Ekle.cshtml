@@ -1,0 +1,54 @@
+﻿@model MuzikAkademisi.Entities.Model.MuzikAleti
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+<html>
+<head>
+    <style>
+        #button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 50px 200px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+    <div style="text-align:center; margin-top:50px;" ><b>Bilgileri Ekleyiniz...</b></div>
+ 
+    <br />
+    <div style="width:350px; height:350px; margin:70px 10px;">
+    @using (Html.BeginForm("Ekle", "Magaza", FormMethod.Post))
+    {
+       
+        @Html.Label("Müzik Aleti Id ")
+        @Html.TextBoxFor(x => x.MuzikAletiId, new { @class = "form-control" ,@readonly ="readonly" })
+        <br />
+        <br />
+        @Html.Label("Fotoğraf: ")
+        @Html.TextBoxFor(m => m.MuzikAletiFotograf, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Açıklama: ")
+        @Html.TextBoxFor(x => x.MuzikAletiAciklama, new { @class = "form-control"})
+        <br />
+        <br />
+        
+        @Html.Label("Fiyat: ")
+        @Html.TextBoxFor(x => x.MuzikAletiFiyat, new { @class = "form-control" })
+        <br />
+
+        <button id="button"> <b>Ekle</b></button>
+    }
+        </div>
+</div>
+ </body>
+</html>

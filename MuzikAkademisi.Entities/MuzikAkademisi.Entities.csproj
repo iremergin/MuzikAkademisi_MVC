@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCBA60C8-1C57-4A6A-ADF8-99A9CDA3979B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MuzikAkademisi.Entities</RootNamespace>
+    <AssemblyName>MuzikAkademisi.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mapping\UyeninAdresleriMap.cs" />
+    <Compile Include="Mapping\AdresMap.cs" />
+    <Compile Include="Mapping\DuyuruMap.cs" />
+    <Compile Include="Mapping\KartMap.cs" />
+    <Compile Include="Mapping\UyeninKurslariMap.cs" />
+    <Compile Include="Mapping\KursMap.cs" />
+    <Compile Include="Mapping\MailMap.cs" />
+    <Compile Include="Mapping\UyeninMuzikAletleriMap.cs" />
+    <Compile Include="Mapping\MuzikAletiMap.cs" />
+    <Compile Include="Mapping\KartinOdemeleriMap.cs" />
+    <Compile Include="Mapping\OdemeMap.cs" />
+    <Compile Include="Mapping\UyeKursOdevleriMap.cs" />
+    <Compile Include="Mapping\OdevMap.cs" />
+    <Compile Include="Mapping\KursunProgramCizelgesiMap.cs" />
+    <Compile Include="Mapping\ProgramCizelgesiMap.cs" />
+    <Compile Include="Mapping\MuzikAletiSiparisleriMap.cs" />
+    <Compile Include="Mapping\SiparisMap.cs" />
+    <Compile Include="Mapping\UyeMap.cs" />
+    <Compile Include="Mapping\MuzikAletiKursYorumlariMap.cs" />
+    <Compile Include="Mapping\YorumMap.cs" />
+    <Compile Include="Migrations\202203271343138_Database.cs" />
+    <Compile Include="Migrations\202203271343138_Database.designer.cs">
+      <DependentUpon>202203271343138_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Adres.cs" />
+    <Compile Include="Model\Duyuru.cs" />
+    <Compile Include="Model\Kart.cs" />
+    <Compile Include="Model\Kurs.cs" />
+    <Compile Include="Model\UyeninKurslari.cs" />
+    <Compile Include="Model\Mail.cs" />
+    <Compile Include="Model\MuzikAkademisiContext.cs" />
+    <Compile Include="Model\MuzikAleti.cs" />
+    <Compile Include="Model\UyeninMuzikAletleri.cs" />
+    <Compile Include="Model\Odeme.cs" />
+    <Compile Include="Model\KartinOdemeleri.cs" />
+    <Compile Include="Model\Odev.cs" />
+    <Compile Include="Model\UyeKursOdevleri.cs" />
+    <Compile Include="Model\ProgramCizelgesi.cs" />
+    <Compile Include="Model\KursunProgramCizelgesi.cs" />
+    <Compile Include="Model\Siparis.cs" />
+    <Compile Include="Model\MuzikAletiSiparisleri.cs" />
+    <Compile Include="Model\Uye.cs" />
+    <Compile Include="Model\UyeninAdresleri.cs" />
+    <Compile Include="Model\Yorum.cs" />
+    <Compile Include="Model\MuzikAletiKursYorumlari.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202203271343138_Database.resx">
+      <DependentUpon>202203271343138_Database.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

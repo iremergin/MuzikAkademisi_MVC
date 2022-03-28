@@ -1,0 +1,54 @@
+﻿@model MuzikAkademisi.Entities.Model.Uye
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+
+<html>
+<head>
+    <style>
+        #button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 230px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+    <div style="text-align:center; margin-top:50px;" ><b>Bilgileri Ekleyiniz...</b></div>
+ 
+    <br />
+    <div style="width:350px; height:350px; margin:70px 10px;">
+    @using (Html.BeginForm("Ekle", "Uye", FormMethod.Post))
+    {
+        @Html.Label("Uye Id ")
+        @Html.TextBoxFor(x => x.UyeId, new { @class = "form-control" ,@readonly ="readonly" })
+        <br />
+        <br />
+        @Html.Label("Üye Adı: ")
+        @Html.TextBoxFor(m => m.UyeAdi, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Üye Soyadı: ")
+        @Html.TextBoxFor(m => m.UyeSoyadi, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Üye Cinsiyet: ")
+        @Html.TextBoxFor(m => m.UyeCinsiyet, new { @class = "form-control" })
+        <br />
+        <br />
+        <button id="button"> <b>Ekle</b></button>
+    }
+        </div>
+</div>
+ </body>
+</html>
+

@@ -1,0 +1,13 @@
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.csproj.AssemblyReference.cache
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\bin\Debug\MuzikAkademisi.Entities.dll.config
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\bin\Debug\MuzikAkademisi.Entities.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\bin\Debug\MuzikAkademisi.Entities.pdb
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.pdb
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.Database.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.csproj.GenerateResource.cache

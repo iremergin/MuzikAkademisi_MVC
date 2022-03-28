@@ -1,0 +1,59 @@
+﻿@using MuzikAkademisi.Entities.Model
+@model List<Kurs>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+<html>
+<head>
+    <style>
+        #btn {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+
+        #ekle {
+            background-color: palevioletred;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 30px 1700px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a id="ekle" href="/Kurs/Ekle/"> Ekle </a>
+
+    <div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+
+        @foreach (var krs in Model)
+        {
+    <div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+    <a href="Kurs/Guncelle/@krs.KursId"><img src="@krs.KursFotograf" style="width:330px; height:150px; " /></a>
+    <p><b>KURS ADI: @krs.KursAdi</b></p>
+    <p><b>EĞİTMEN: @krs.UyeninKurslaris</b></p>
+    <p><b>FİYAT: @krs.KursFiyat</b></p>
+
+    <a id="btn" href="/Kurs/Sil/@krs.KursId"> Sil </a>
+    <a id="btn" href="/Kurs/Guncelle/@krs.KursId"> Güncelle </a>
+    <a id="btn" href="/Uye/Ekle/@krs.KursId"> Üye Ekle </a>
+    </div>}
+
+
+    </div>
+</body>
+</html>
+
