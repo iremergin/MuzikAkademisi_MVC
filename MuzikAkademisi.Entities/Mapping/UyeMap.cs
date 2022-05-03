@@ -29,9 +29,8 @@ namespace MuzikAkademisi.Entities.Mapping
             this.Property(p => p.UyeKodu).HasColumnType("varchar").HasMaxLength(6);
             this.Property(p => p.UyeTuru).HasColumnType("char").HasMaxLength(1);
 
-            
+       
 
-            
         }
     }
 }

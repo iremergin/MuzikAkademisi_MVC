@@ -30,6 +30,8 @@ namespace MuzikAkademisi.Entities.Model
        // public virtual ICollection<Kurs> Egitmens { get; set; }
 
         public virtual ICollection<Kart> Karts { get; set; }
+       
+
 
     }
 }

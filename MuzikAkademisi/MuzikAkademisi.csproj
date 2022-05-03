@@ -132,8 +132,10 @@
     <Compile Include="Controllers\KursController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MagazaController.cs" />
+    <Compile Include="Controllers\OdemeController.cs" />
+    <Compile Include="Controllers\ProfilController.cs" />
+    <Compile Include="Controllers\SepetController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
-    <Compile Include="Controllers\UyeninKurslariController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,10 +185,15 @@
     <Content Include="Views\Magaza\Ekle.cshtml" />
     <Content Include="Views\Magaza\Guncelle.cshtml" />
     <Content Include="Views\Kurs\Guncelle.cshtml" />
-    <Content Include="Views\UyeninKurslari\Index.cshtml" />
     <Content Include="Views\Uye\Ekle.cshtml" />
     <Content Include="Views\Uye\Index.cshtml" />
     <Content Include="Views\Uye\Guncelle.cshtml" />
+    <Content Include="Views\Profil\Index.cshtml" />
+    <Content Include="Views\Sepet\Index.cshtml" />
+    <Content Include="Views\Odeme\Index.cshtml" />
+    <Content Include="Views\Sepet\MuzikAleti.cshtml" />
+    <Content Include="Views\Odeme\MuzikAleti.cshtml" />
+    <Content Include="Views\Profil\MuzikAleti.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

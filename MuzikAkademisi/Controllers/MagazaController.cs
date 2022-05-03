@@ -63,8 +63,6 @@ namespace MuzikAkademisi.Controllers
             mzk.MuzikAletiDurumu = true;
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-      
+        }    
     }
 }

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Database : DbMigration
+    public partial class database : DbMigration
     {
         public override void Up()
         {
@@ -105,6 +105,7 @@
                         OgrenciIlerlemeSeviyesi = c.Decimal(nullable: false, precision: 18, scale: 2),
                         KursKatilimciSayisi = c.Int(nullable: false),
                         KursDurumu = c.Boolean(nullable: false),
+                        EgitmenId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.KursId);
             
@@ -191,6 +192,20 @@
                         SiparisTarihi = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.SiparisId);
+            
+            CreateTable(
+                "dbo.Sepets",
+                c => new
+                    {
+                        SepetId = c.Int(nullable: false, identity: true),
+                        KursId = c.Int(nullable: false),
+                        MuzikAletiId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.SepetId)
+                .ForeignKey("dbo.tblKurs", t => t.KursId, cascadeDelete: true)
+                .ForeignKey("dbo.tblMuzikAleti", t => t.MuzikAletiId, cascadeDelete: true)
+                .Index(t => t.KursId)
+                .Index(t => t.MuzikAletiId);
             
             CreateTable(
                 "dbo.tblUyeninMuzikAletleri",
@@ -320,6 +335,8 @@
             DropForeignKey("dbo.tblUyeninMuzikAletleri", "UyeId", "dbo.tblUye");
             DropForeignKey("dbo.tblUyeninMuzikAletleri", "MuzikAletiId", "dbo.tblMuzikAleti");
             DropForeignKey("dbo.tblUyeninMuzikAletleri", "Duyuru_DuyuruId", "dbo.tblDuyuru");
+            DropForeignKey("dbo.Sepets", "MuzikAletiId", "dbo.tblMuzikAleti");
+            DropForeignKey("dbo.Sepets", "KursId", "dbo.tblKurs");
             DropForeignKey("dbo.tblMuzikAletiSiparisleri", "SiparisId", "dbo.tblSiparis");
             DropForeignKey("dbo.tblMuzikAletiSiparisleri", "MuzikAletiId", "dbo.tblMuzikAleti");
             DropForeignKey("dbo.tblMuzikAletiKursYorumlari", "YorumId", "dbo.tblYorum");
@@ -336,6 +353,8 @@
             DropIndex("dbo.tblUyeninMuzikAletleri", new[] { "Duyuru_DuyuruId" });
             DropIndex("dbo.tblUyeninMuzikAletleri", new[] { "UyeId" });
             DropIndex("dbo.tblUyeninMuzikAletleri", new[] { "MuzikAletiId" });
+            DropIndex("dbo.Sepets", new[] { "MuzikAletiId" });
+            DropIndex("dbo.Sepets", new[] { "KursId" });
             DropIndex("dbo.tblMuzikAletiSiparisleri", new[] { "SiparisId" });
             DropIndex("dbo.tblMuzikAletiSiparisleri", new[] { "MuzikAletiId" });
             DropIndex("dbo.tblMuzikAletiKursYorumlari", new[] { "MuzikAletiId" });
@@ -358,6 +377,7 @@
             DropTable("dbo.tblProgramCizelgesi");
             DropTable("dbo.tblKursunProgramCizelgesi");
             DropTable("dbo.tblUyeninMuzikAletleri");
+            DropTable("dbo.Sepets");
             DropTable("dbo.tblSiparis");
             DropTable("dbo.tblMuzikAletiSiparisleri");
             DropTable("dbo.tblYorum");

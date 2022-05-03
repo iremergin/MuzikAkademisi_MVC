@@ -28,24 +28,26 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 30px 1700px;
+            margin: 5px 1700px;
             border-radius:10px;
         }
     </style>
 </head>
 <body>
     <a id="ekle" href="/Magaza/Ekle/"> Ekle </a>
+    <a id="ekle" href="/Sepet/MuzikAleti/">Sepet</a>
 
-    <div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+    <div style="width:400px; height:400px; background-color:palevioletred; margin:10px 20px; ">
         @foreach (var mzk in Model)
         {
-    <div style="width:350px; height:350px; background-color:palevioletred; margin:20px ; ">
-        <a href="Magaza/Guncelle/@mzk.MuzikAletiFotograf"><img src="@mzk.MuzikAletiFotograf" style="width: 330px; height: 150px; " /></a>
-        <p><b>@mzk.MuzikAletiAciklama</b></p>
-        <p><b>@mzk.MuzikAletiFiyat</b></p>
+        <div style="width:400px; height:400px; background-color:palevioletred; margin:20px ; ">
+            <a href="Magaza/Guncelle/@mzk.MuzikAletiFotograf"><img src="@mzk.MuzikAletiFotograf" style="width: 380px; height: 150px; " /></a>
+            <p><b>@mzk.MuzikAletiAciklama</b></p>
+            <p><b>@mzk.MuzikAletiFiyat</b></p>
 
-        <a id="btn" href="/Magaza/Sil/@mzk.MuzikAletiId"> Sil </a>
-        <a id="btn" href="/Magaza/Guncelle/@mzk.MuzikAletiId"> Güncelle </a>
+            <a id="btn" href="/Magaza/Sil/@mzk.MuzikAletiId"> Sil </a>
+            <a id="btn" href="/Magaza/Guncelle/@mzk.MuzikAletiId"> Güncelle </a>
+            <a id="btn" href="/Sepet/MuzikAleti/@mzk.MuzikAletiId"> Sepete Ekle</a>
         </div>
         }
 

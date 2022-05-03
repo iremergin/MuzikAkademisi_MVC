@@ -129,8 +129,11 @@ C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\roslyn\vbc.
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\roslyn\VBCSCompiler.exe
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\Antlr3.Runtime.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.SqlServer.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.Entities.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\Newtonsoft.Json.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.Helpers.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.Mvc.dll
@@ -140,6 +143,10 @@ C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.WebPages.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.WebPages.Razor.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\WebGrease.dll
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.Entities.pdb
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.Entities.dll.config
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.xml
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.SqlServer.xml
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.Helpers.xml
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.Mvc.xml
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.Optimization.xml
@@ -154,10 +161,3 @@ C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\Muzik
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.pdb
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.dll
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.SqlServer.dll
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.Entities.dll
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.Entities.pdb
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.Entities.dll.config
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.xml
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\EntityFramework.SqlServer.xml

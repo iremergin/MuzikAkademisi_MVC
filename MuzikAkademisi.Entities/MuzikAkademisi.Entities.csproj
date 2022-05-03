@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\SepetMap.cs" />
     <Compile Include="Mapping\UyeninAdresleriMap.cs" />
     <Compile Include="Mapping\AdresMap.cs" />
     <Compile Include="Mapping\DuyuruMap.cs" />
@@ -71,15 +72,16 @@
     <Compile Include="Mapping\UyeMap.cs" />
     <Compile Include="Mapping\MuzikAletiKursYorumlariMap.cs" />
     <Compile Include="Mapping\YorumMap.cs" />
-    <Compile Include="Migrations\202203271343138_Database.cs" />
-    <Compile Include="Migrations\202203271343138_Database.designer.cs">
-      <DependentUpon>202203271343138_Database.cs</DependentUpon>
+    <Compile Include="Migrations\202205011113419_database.cs" />
+    <Compile Include="Migrations\202205011113419_database.designer.cs">
+      <DependentUpon>202205011113419_database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Adres.cs" />
     <Compile Include="Model\Duyuru.cs" />
     <Compile Include="Model\Kart.cs" />
     <Compile Include="Model\Kurs.cs" />
+    <Compile Include="Model\Sepet.cs" />
     <Compile Include="Model\UyeninKurslari.cs" />
     <Compile Include="Model\Mail.cs" />
     <Compile Include="Model\MuzikAkademisiContext.cs" />
@@ -104,8 +106,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202203271343138_Database.resx">
-      <DependentUpon>202203271343138_Database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205011113419_database.resx">
+      <DependentUpon>202205011113419_database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

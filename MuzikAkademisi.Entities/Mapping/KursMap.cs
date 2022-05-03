@@ -29,7 +29,9 @@ namespace MuzikAkademisi.Entities.Mapping
             this.Property(p => p.OgrenciIlerlemeSeviyesi).HasColumnType("decimal");
             this.Property(p => p.KursKatilimciSayisi).HasColumnType("int");
 
-            //this.HasRequired(p => p.EgitmenId).WithMany(p => p.Egitmens).HasForeignKey
+            //this.HasRequired(p => p.EgitmenId).WithMany(p => p.Egitmens).HasForeignKey();
+          
+
         }
     }
 }

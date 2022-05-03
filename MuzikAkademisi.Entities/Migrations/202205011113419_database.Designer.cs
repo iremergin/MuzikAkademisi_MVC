@@ -7,13 +7,13 @@ namespace MuzikAkademisi.Entities.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Database : IMigrationMetadata
+    public sealed partial class database : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Database));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(database));
         
         string IMigrationMetadata.Id
         {
-            get { return "202203271343138_Database"; }
+            get { return "202205011113419_database"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,10 +1,8 @@
 ﻿@using MuzikAkademisi.Entities.Model
 @model List<Kurs>
 
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
-}
+@{ ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_AnasayfaLayout.cshtml"; }
 <html>
 <head>
     <style>
@@ -29,31 +27,36 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 30px 1700px;
+            margin: 5px 1700px 0;
             border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <a id="ekle" href="/Kurs/Ekle/"> Ekle </a>
+    <a id="ekle" href="/Kurs/Ekle/">Kurs Ekle</a>
+    <a id="ekle" href="/Sepet/Index/">Kurs Sepeti</a>
 
-    <div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+    <div class="container" style="width: 500px; height: 500px;  ">
+        <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 10px 20px; ">
 
-        @foreach (var krs in Model)
-        {
-    <div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
-    <a href="Kurs/Guncelle/@krs.KursId"><img src="@krs.KursFotograf" style="width:330px; height:150px; " /></a>
+            @foreach (var krs in Model)
+            {
+<div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px;  ">
+    <a href="Kurs/Guncelle/@krs.KursId"><img src="@krs.KursFotograf" style="width:380px; height:150px; " /></a>
     <p><b>KURS ADI: @krs.KursAdi</b></p>
-    <p><b>EĞİTMEN: @krs.UyeninKurslaris</b></p>
     <p><b>FİYAT: @krs.KursFiyat</b></p>
 
-    <a id="btn" href="/Kurs/Sil/@krs.KursId"> Sil </a>
-    <a id="btn" href="/Kurs/Guncelle/@krs.KursId"> Güncelle </a>
-    <a id="btn" href="/Uye/Ekle/@krs.KursId"> Üye Ekle </a>
-    </div>}
-
-
+    <div style="width:400px; height:200px; margin-top:40px; ">
+        <a id="btn" href="/Kurs/Sil/@krs.KursId"> Sil </a>
+        <a id="btn" href="/Kurs/Guncelle/@krs.KursId"> Güncelle </a>
+        <a id="btn" href="/Uye/Index/@krs.KursId"> Üye Listele </a>
+        <a id="btn" href="/Sepet/Index/@krs.KursId"> Sepete Ekle</a>
     </div>
+
+</div>}
+        </div>
+    </div>
+
 </body>
 </html>
 

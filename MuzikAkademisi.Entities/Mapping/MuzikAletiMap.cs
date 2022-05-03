@@ -21,7 +21,8 @@ namespace MuzikAkademisi.Entities.Mapping
             this.Property(p => p.MuzikAletiFotograf).HasColumnType("varchar").HasMaxLength(200);       
             this.Property(p => p.MuzikAletiFiyat).HasPrecision(11,3);       
             this.Property(p => p.MuzikAletiAdedi).HasColumnType("int");       
-            this.Property(p => p.MuzikAletiTuru).HasColumnType("varchar").HasMaxLength(50);       
+            this.Property(p => p.MuzikAletiTuru).HasColumnType("varchar").HasMaxLength(50);
+
         }
     }
 }

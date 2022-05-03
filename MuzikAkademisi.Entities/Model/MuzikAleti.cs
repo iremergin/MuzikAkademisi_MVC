@@ -15,8 +15,7 @@ namespace MuzikAkademisi.Entities.Model
         public string MuzikAletiTuru{ get; set; }
         public bool MuzikAletiDurumu{ get; set; }
 
-
-      
+        public virtual ICollection<Sepet> Sepets { get; set; }
 
     }
 }

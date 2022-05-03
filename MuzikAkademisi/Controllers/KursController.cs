@@ -18,6 +18,7 @@ namespace MuzikAkademisi.Controllers
             var kurslar = db.Kurs.AsNoTracking().Where(k => k.KursDurumu == true);
 
             return View(kurslar.ToList());
+
         }
 
         [HttpGet]
@@ -32,7 +33,8 @@ namespace MuzikAkademisi.Controllers
             Kurs krs = new Kurs();
             krs.KursFotograf = pKurs.KursFotograf;
             krs.KursAdi = pKurs.KursAdi;
-            //krs.UyeninKurslaris = db.UyeninKurslari.Find(pKurs.UyeninKurslaris);
+            //krs.Egitmen.UyeAdi = pKurs.Egitmen.UyeAdi;
+            //krs.Egitmen.UyeSoyadi = pKurs.Egitmen.UyeSoyadi;
             krs.KursFiyat = pKurs.KursFiyat;
             krs.KursDurumu = true;
             db.Kurs.Add(krs);
@@ -63,13 +65,12 @@ namespace MuzikAkademisi.Controllers
             Kurs krs = db.Kurs.Find(pKurs.KursId);
             krs.KursFotograf = pKurs.KursFotograf;
             krs.KursAdi = pKurs.KursAdi;
-            //krs.UyeninKurslaris = db.UyeninKurslari.Find(pKurs.UyeninKurslaris);
+            //krs.Egitmen.UyeAdi = pKurs.Egitmen.UyeAdi;
+            //krs.Egitmen.UyeSoyadi = pKurs.Egitmen.UyeSoyadi;
             krs.KursFiyat = pKurs.KursFiyat;
             krs.KursDurumu = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
     }
-
-
 }

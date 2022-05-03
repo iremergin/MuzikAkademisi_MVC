@@ -10,6 +10,8 @@ namespace MuzikAkademisi.Entities.Model
 {
     public class MuzikAkademisiContext:DbContext
     {
+    
+
         public MuzikAkademisiContext():base("name=MuzikAkademisiEntities")
         {
 
@@ -38,6 +40,7 @@ namespace MuzikAkademisi.Entities.Model
             modelBuilder.Configurations.Add(new UyeMap());
             modelBuilder.Configurations.Add(new MuzikAletiKursYorumlariMap());
             modelBuilder.Configurations.Add(new YorumMap());
+            modelBuilder.Configurations.Add(new SepetMap());
         }
 
 
@@ -61,5 +64,6 @@ namespace MuzikAkademisi.Entities.Model
         public DbSet<Uye> Uye{ get; set; }
         public DbSet<Yorum> Yorum{ get; set; }
         public DbSet<MuzikAletiKursYorumlari> MuzikAletiKursYorumlari{ get; set; }
+        public DbSet<Sepet> Sepet{ get; set; }
     }
 }

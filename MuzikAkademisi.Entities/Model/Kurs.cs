@@ -25,9 +25,13 @@ namespace MuzikAkademisi.Entities.Model
         public decimal OgrenciIlerlemeSeviyesi { get; set; }
         public int KursKatilimciSayisi { get; set; }
         public bool KursDurumu { get; set; }
-       // public int EgitmenId { get; set; }
-       // public Uye Egitmen { get; set; }
+        public int EgitmenId { get; set; }
+        //public Uye Egitmen { get; set; }
 
         public virtual ICollection<Duyuru> Duyurus { get; set; }
+        public virtual ICollection<Sepet> Sepets { get; set; }
+
+
+
     }
 }
