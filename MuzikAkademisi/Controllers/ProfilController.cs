@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace MuzikAkademisi.Controllers
 {
     public class ProfilController : Controller
@@ -13,17 +14,39 @@ namespace MuzikAkademisi.Controllers
         // GET: Profil
         public ActionResult Index()
         {
-            var kurslar = db.Kurs.AsNoTracking();
+            string kId = @Session["UyeId"].ToString();
+            int kullaiciId = Convert.ToInt32(kId);
 
-
-            return View(kurslar.ToList());
+            UyeMuzikAletiKurs uma = new UyeMuzikAletiKurs();
+            
+            var profil = db.UyeMuzikAletiKurs.AsNoTracking().Where(x => x.UyeId==kullaiciId);
+          
+            return View(profil.ToList());
+      
         }
-        public ActionResult MuzikAleti()
+        public ActionResult Sil(int id)
         {
-            var muzikAletleri = db.MuzikAleti.AsNoTracking();
+            UyeMuzikAletiKurs uyk = db.UyeMuzikAletiKurs.Find(id);
+            db.UyeMuzikAletiKurs.Remove(uyk);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
 
-            return View(muzikAletleri.ToList());
+        public ActionResult Ekle(int id)
+        {
+            UyeMuzikAletiKurs uma = new UyeMuzikAletiKurs();
+            string kId = @Session["UyeId"].ToString();
+            int kullaiciId = Convert.ToInt32(kId);
+
+            Kurs kurss = db.Kurs.Find(id);
+            uma.KursId = 6;
+            uma.MuzikAletiId = 1;
+            uma.UyeId = kullaiciId;
+            db.UyeMuzikAletiKurs.Add(uma);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
 
     }

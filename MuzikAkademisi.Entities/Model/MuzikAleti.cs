@@ -7,6 +7,8 @@ namespace MuzikAkademisi.Entities.Model
         public virtual ICollection<UyeninMuzikAletleri> UyeninMuzikAletleris { get; set; }
         public virtual ICollection<MuzikAletiSiparisleri> MuzikAletiSiparisleris { get; set; }
         public virtual ICollection<MuzikAletiKursYorumlari> MuzikAletiKursYorumlaris { get; set; }
+        public virtual ICollection<UyeMuzikAletiKurs> UyeMuzikAletiKurs { get; set; }
+        public virtual ICollection<OdemeKursMuzikAleti> OdemeKursMuzikAletis { get; set; }
         public string MuzikAletiAdi { get; set; }
         public string MuzikAletiAciklama{ get; set; }
         public string MuzikAletiFotograf{ get; set; }
@@ -16,6 +18,7 @@ namespace MuzikAkademisi.Entities.Model
         public bool MuzikAletiDurumu{ get; set; }
 
         public virtual ICollection<Sepet> Sepets { get; set; }
+
 
     }
 }

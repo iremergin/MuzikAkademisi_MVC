@@ -20,6 +20,35 @@
         }
     </style>
 
+    <script>/*const { Alert } = require("bootstrap");*/
+
+
+
+        window.onload = function gizle() {
+            var bilgiYetki = document.getElementById("yetkiBilgi").value;
+            var buton = document.getElementsByClassName("btn");
+            var arrFromsList = Array.prototype.slice.call(buton);
+
+            if (bilgiYetki == "K") {
+
+
+                for (var i = 0; i <= arrFromsList.length; i++) {
+
+                    arrFromsList[i].style.display = "none";
+
+                }
+                alert("Kullanıcı sisteme giriş yaptı.");
+            }
+            else {
+
+                alert("Admin sisteme giriş yaptı.");
+
+
+            };
+
+
+        }</script>
+
 </head>
 <body>
     <div style="font-family:'Century Gothic'">
@@ -47,8 +76,8 @@
         <th>@uye.UyeAdi</th>
         <th>@uye.UyeSoyadi</th>
         <th>
-            <a id="islem" href="/Uye/Sil/@uye.UyeId">Sil</a>&nbsp;
-            <a id="islem" href="/Uye/Guncelle/@uye.UyeId">Güncelle</a>
+            <a id="islem" class="btn" href="/Uye/Sil/@uye.UyeId">Sil</a>&nbsp;
+            <a id="islem" class="btn" href="/Uye/Guncelle/@uye.UyeId">Güncelle</a>
         </th>
     </tr>}
             </tbody>

@@ -11,35 +11,64 @@ namespace MuzikAkademisi.Controllers
     {
         MuzikAkademisiContext db = new MuzikAkademisiContext();
         // GET: Sepet
+
+
+
+
         public ActionResult Index()
         {
-            var kurslar = db.Kurs.AsNoTracking();
+       
 
+            var sepet2 = db.Sepet.AsNoTracking();
 
-            return View(kurslar.ToList());
-        }
-        public ActionResult MuzikAleti()
-        {
-            var muzikAletleri = db.MuzikAleti.AsNoTracking();
-
-
-            return View(muzikAletleri.ToList());
+            return View(sepet2.ToList());
         }
 
 
         public ActionResult Sil(int id)
         {
-            Kurs krs = db.Kurs.Find(id);
-            db.Kurs.Remove(krs);
+            Sepet spt = db.Sepet.Find(id);
+            db.Sepet.Remove(spt);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult Sill(int id)
+
+        public ActionResult Ekle(int id)
         {
-            MuzikAleti mzk = db.MuzikAleti.Find(id);
-            db.MuzikAleti.Remove(mzk);
+
+            int uyeId = Convert.ToInt16(Session["UyeId"]);
+            Sepet sepet = new Sepet();
+
+            Kurs kurss = db.Kurs.Find(id);
+            sepet.KursId = kurss.KursId;
+            sepet.MuzikAletiId = 1;
+            sepet.UyeId = uyeId;
+
+            db.Sepet.Add(sepet);
             db.SaveChanges();
+
             return RedirectToAction("Index");
         }
+        //login olan üyeden al
+        public ActionResult Ekle2(int id)
+        {
+          
+            int uyeId = Convert.ToInt16(Session["UyeId"]);
+           
+            Sepet sepet = new Sepet();
+
+            MuzikAleti muzik = db.MuzikAleti.Find(id);
+            sepet.MuzikAletiId = muzik.MuzikAletiId;
+            sepet.KursId = 7;
+            sepet.UyeId = uyeId;
+
+            db.Sepet.Add(sepet);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+
+
     }
 }

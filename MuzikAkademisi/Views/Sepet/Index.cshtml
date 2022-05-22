@@ -1,5 +1,5 @@
 ﻿@using MuzikAkademisi.Entities.Model
-@model List<Kurs>
+@model List<Sepet>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
@@ -17,6 +17,9 @@
             display: inline-block;
             font-size: 16px;
             border-radius: 10px;
+            margin-left: 20px;
+            border-style: solid;
+            border-style: solid;
         }
     </style>
 </head>
@@ -24,20 +27,49 @@
 <body>
     <div style="margin:50px 50px; font-size:20px;"><b>~SEPET~</b></div>
 
-    <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; ">
+    <div style="width: 400px; height: 400px;  ">
 
 
         @foreach (var krs in Model)
         {
-<div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
-    <a href="#"><img src="@krs.KursFotograf" style="width:330px; height:150px; " /></a>
-    <p><b>KURS ADI: @krs.KursAdi</b></p>
-    <p><b>KURS FİYATI: @krs.KursFiyat</b></p>
+        <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; ">
 
-    <a id="btn" href="/Sepet/Sil/@krs.KursId"> Ürünü Sil </a>
-    <a id="btn" href="/Odeme/Index/@krs.KursId"> Sepeti Onayla </a>
+            <a href="#"><img src="@krs.Kurs.KursFotograf" style="width:330px; height:150px; " /></a>
+            <p><b>KURS ADI: @krs.Kurs.KursAdi</b></p>
+            <p><b>KURS FİYATI: @krs.Kurs.KursFiyat</b></p>
 
-</div>}
+            <a id="btn" href="/Sepet/Sil/@krs.SepetId"> Ürünü Sil </a>
+            <a id="btn" href="/OdemeKursMuzikAleti/Ekle/@krs.SepetId"> Sepeti Onayla </a>
+
+
+        </div>
+        
+   
+        
+        }
+    </div>
+
+
+
+
+      <div style="width: 400px; height: 400px;  ">
+
+
+        @foreach (var mzk in Model)
+        {
+          <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid;">
+              <a href="#"><img src="@mzk.MuzikAleti.MuzikAletiFotograf" style="width:330px; height:150px; " /></a>
+              <p><b> @mzk.MuzikAleti.MuzikAletiAciklama</b></p>
+              <p><b> @mzk.MuzikAleti.MuzikAletiFiyat</b></p>
+
+              <a id="btn" href="/Sepet/Sil/@mzk.SepetId"> Ürünü Sil </a>
+              <a id="btn" href="/OdemeKursMuzikAleti/Ekle/@mzk.SepetId"> Sepeti Onayla </a>
+
+          </div>
+        
+
+        
+        }
     </div>
 
 </body>

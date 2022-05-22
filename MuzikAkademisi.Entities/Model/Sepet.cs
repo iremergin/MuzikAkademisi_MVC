@@ -11,6 +11,8 @@ namespace MuzikAkademisi.Entities.Model
         public virtual Kurs Kurs { get; set; }
         public int MuzikAletiId { get; set; }
         public virtual MuzikAleti MuzikAleti { get; set; }
+        public int UyeId { get; set; }
+        public virtual Uye Uye { get; set; }
 
 
     }

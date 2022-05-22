@@ -1,109 +1,156 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model MuzikAkademisi.Entities.Model.DuyuruProgramCizelgesi
+@{
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
 }
 <html>
 <head>
     <link rel=”stylesheet” type=”text/css” href=”style.css” />
+    <style>
+
+        #ekle {
+            background-color: palevioletred;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin:5px 20px 30px 50px;
+            border-radius: 10px;
+            border-style: solid;
+        }
+        #btn {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+         
+
+        }
+    </style>
+
+
+    <script>
+/*const { Alert } = require("bootstrap");*/
+
+
+
+        window.onload = function gizle() {
+            var bilgiYetki = document.getElementById("yetkiBilgi").value;
+            var buton = document.getElementsByClassName("btn");
+            var arrFromsList = Array.prototype.slice.call(buton);
+
+            if (bilgiYetki == "K") {
+                
+               
+                for (var i = 0; i <= arrFromsList.length; i++) {
+
+                    arrFromsList[i].style.display = "none";
+                   
+                }
+                alert("Kullanıcı sisteme giriş yaptı.");
+            }
+            else {
+
+                alert("Admin sisteme giriş yaptı.");
+
+                
+            };
+
+            
+        }
+
+    </script>
 </head>
 <body style="margin:0; padding:0;">
 
 
     <!--fotoğraf-->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="margin-bottom:500px;">
-                <img src="~/Content/Multiple-Instruments.jpg" class="d-block w-100" alt="..." style="width:100%; height:800px;"/>
+        <div class="carousel-inner" style="justify-content:flex-start; flex-wrap:wrap;">
+            <div class="carousel-item active" style="margin-bottom:5px;">
+                <img src="~/Content/Multiple-Instruments.jpg" class="d-block w-100" alt="..." style="width:100%; height:800px; " />
 
 
-
-                <div style=" width:500px; height:600px; position:absolute;">
-                    <div style="width:400px; height:50px; background-color:palevioletred; margin:100px 20px 20px 50px; padding-top:20px; text-align:center; font-size:20px;"><b>DUYURULAR</b></div>
-                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 20px; text-align: center;">- YENİ KURS DUYURULARI</div>
-                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 20px; text-align: center;">- YENİ SATIŞ İLANLARI</div>
-                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 20px; text-align: center;">......</div>
-                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 20px; text-align: center;">......</div>
-                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 20px; text-align: center;">......</div>
-                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 20px; text-align: center;">......</div>
-                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 20px; text-align: center;">......</div>
-                </div>
-
-                <div style="width:1000px; height:500px; background-color:palevioletred; margin:200px 180px auto auto;">
-                    <table style=" height:500px; background-color:palevioletred" align="center" cellpadding="20">
-
-
-                        <tr>
-                            <th>PAZARTESİ</th>
-                            <th>SALI</th>
-                            <th>ÇARŞAMBA</th>
-                            <th>PERŞEMBE</th>
-                            <th>CUMA</th>
-                            <th>CUMARTESİ</th>
-                            <th>PAZAR</th>
-                        </tr>
-                        <tr>
-
-                            <td></td>
-                            <td>09:00 <br /> Piyano Kursu</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>09:00 <br /> Bağlama Kursu </td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>12:00 <br /> Gitar Kursu </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-
-                            <td>16:00 <br /> Keman Kursu </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                    </table>
-
-                </div>
 
             </div>
-        </div>
-    </div>
+            <div><a id="ekle" style="margin: 50px 20px 0px 1550px;" href="/ProgramCizelgesi/Ekle/">Program Ekle</a></div>
+            <div>
+                <div style=" width:500px; height:600px;">
+                    <a id="ekle"  class="btn" href="/Duyuru/Ekle/"><b>Duyuru Ekle</b></a>
+                    <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0px 20px 20px 50px; padding-top: 20px; text-align: center; font-size: 20px; border-radius: 10px; border-style:solid;"><b>DUYURULAR</b></div>
 
+                    <button style="display:none" ; id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
+
+
+                    @foreach (var dyr in Model.Duyuru)
+                    {
+
+        <div style="width: 400px; height: 150px; background-color: palevioletred; margin: 0 20px 20px 50px; padding-top: 3px; text-align: center; border-radius: 10px; border-style: solid;" id="ornek">
+            <p><b> @dyr.DuyuruAdi</b></p>
+            <p> @dyr.DuyuruAciklama</p>
+
+            <a id="btn" class="btn" href="/Home/Sil/@dyr.DuyuruId"> Sil </a>
+            <a id="btn" class="btn" href="/Duyuru/Guncelle/@dyr.DuyuruId"> Güncelle </a>
+
+        </div>}
+                </div>
+            </div>
+
+
+            <div>
+                <table style="text-align:center; width: 1000px; height: 500px; background-color: palevioletred; margin: -520px 180px auto auto; padding: 15px; border-radius: 10px; border-style: solid; border-color:black; padding-top:0px;">
+
+
+
+                    <tr>
+                        <th><a href="/Home/Index/Pazartesi" style="color:black; text-decoration:none; background-color:pink; padding:20px; border-radius:10px;"> PAZARTESİ @ViewBag.Message  </a></th>
+                        <th><a href="/Home/Index/Salı" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">SALI</a></th>
+                        <th><a href="/Home/Index/Çarşamba" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">ÇARŞAMBA</a></th>
+                        <th><a href="/Home/Index/Perşembe" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">PERŞEMBE</a></th>
+                        <th><a href="/Home/Index/Cuma" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">CUMA</a></th>
+                        <th><a href="/Home/Index/Cumartesi" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">CUMARTESİ</a></th>
+                        <th><a href="/Home/Index/Pazar" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">PAZAR</a></th>
+
+
+                    </tr>
+
+                    <tr>
+
+                        @foreach (var et in Model.ProgramCizelgesi)
+
+                        {
+
+            <td style="font-size: 20px; background-color: pink; padding: 20px; border-radius: 10px; text-align: center; ">
+                <b>@et.Gun</b>
+                <br /> @et.Kurs.KursAdi
+                <br /> @et.Saat.Hour:@et.Saat.Minute<br />
+               <a id="btn"  href="/ProgramCizelgesi/Sil/@et.ProgramCizelgesiId"> Sil </a>
+                <a id="btn"href="/ProgramCizelgesi/Guncelle/@et.ProgramCizelgesiId"> Güncelle </a>
+
+            </td>
+}
+                    </tr>
+
+
+
+
+
+
+                </table>
+
+            </div>
+
+        </div>
+        </div>
+ 
 
 </body>
 </html>

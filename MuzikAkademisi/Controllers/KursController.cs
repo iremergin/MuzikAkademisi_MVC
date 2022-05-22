@@ -13,13 +13,7 @@ namespace MuzikAkademisi.Controllers
 
         MuzikAkademisiContext db = new MuzikAkademisiContext();
         // GET: Kurs
-        public ActionResult Index()
-        {
-            var kurslar = db.Kurs.AsNoTracking().Where(k => k.KursDurumu == true);
-
-            return View(kurslar.ToList());
-
-        }
+       
 
         [HttpGet]
         public ActionResult Ekle()
@@ -72,5 +66,15 @@ namespace MuzikAkademisi.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [AllowAnonymous]
+        public ActionResult Index()
+        {
+            var kurslar = db.Kurs.AsNoTracking().Where(k => k.KursDurumu == true);
+
+            return View(kurslar.ToList());
+
+        }
+
     }
 }

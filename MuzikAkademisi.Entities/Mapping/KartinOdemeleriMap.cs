@@ -17,7 +17,7 @@ namespace MuzikAkademisi.Entities.Mapping
             this.Property(p => p.KartinOdemeleriId).HasColumnType("int");
             this.Property(p => p.KartinOdemeleriId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            this.HasRequired(p => p.Odeme).WithMany(p => p.KartinOdemeleris).HasForeignKey(x => x.OdemeId); ;
+            this.HasRequired(p => p.Odeme).WithMany(p => p.KartinOdemeleris).HasForeignKey(x => x.OdemeId); 
             this.HasRequired(p => p.Kart).WithMany(p => p.KartinOdemeleris).HasForeignKey(x => x.KartId);
             this.HasRequired(p => p.Adres).WithMany(p => p.KartinOdemeleris).HasForeignKey(x => x.AdresId);
         }

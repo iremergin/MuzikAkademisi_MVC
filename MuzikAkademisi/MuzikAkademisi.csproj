@@ -127,13 +127,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DuyuruController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KayitOlController.cs" />
     <Compile Include="Controllers\KursController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MagazaController.cs" />
-    <Compile Include="Controllers\OdemeController.cs" />
+    <Compile Include="Controllers\OdemeKursMuzikAletiController.cs" />
     <Compile Include="Controllers\ProfilController.cs" />
+    <Compile Include="Controllers\ProgramCizelgesiController.cs" />
     <Compile Include="Controllers\SepetController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -190,10 +192,11 @@
     <Content Include="Views\Uye\Guncelle.cshtml" />
     <Content Include="Views\Profil\Index.cshtml" />
     <Content Include="Views\Sepet\Index.cshtml" />
-    <Content Include="Views\Odeme\Index.cshtml" />
-    <Content Include="Views\Sepet\MuzikAleti.cshtml" />
-    <Content Include="Views\Odeme\MuzikAleti.cshtml" />
-    <Content Include="Views\Profil\MuzikAleti.cshtml" />
+    <Content Include="Views\OdemeKursMuzikAleti\Index.cshtml" />
+    <Content Include="Views\Duyuru\Ekle.cshtml" />
+    <Content Include="Views\Duyuru\Guncelle.cshtml" />
+    <Content Include="Views\ProgramCizelgesi\Ekle.cshtml" />
+    <Content Include="Views\ProgramCizelgesi\Guncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

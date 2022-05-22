@@ -51,7 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\OdemeKursMuzikAletiMap.cs" />
     <Compile Include="Mapping\SepetMap.cs" />
+    <Compile Include="Mapping\UyeMuzikAletiKursMap.cs" />
     <Compile Include="Mapping\UyeninAdresleriMap.cs" />
     <Compile Include="Mapping\AdresMap.cs" />
     <Compile Include="Mapping\DuyuruMap.cs" />
@@ -65,23 +67,49 @@
     <Compile Include="Mapping\OdemeMap.cs" />
     <Compile Include="Mapping\UyeKursOdevleriMap.cs" />
     <Compile Include="Mapping\OdevMap.cs" />
-    <Compile Include="Mapping\KursunProgramCizelgesiMap.cs" />
     <Compile Include="Mapping\ProgramCizelgesiMap.cs" />
     <Compile Include="Mapping\MuzikAletiSiparisleriMap.cs" />
     <Compile Include="Mapping\SiparisMap.cs" />
     <Compile Include="Mapping\UyeMap.cs" />
     <Compile Include="Mapping\MuzikAletiKursYorumlariMap.cs" />
     <Compile Include="Mapping\YorumMap.cs" />
-    <Compile Include="Migrations\202205011113419_database.cs" />
-    <Compile Include="Migrations\202205011113419_database.designer.cs">
-      <DependentUpon>202205011113419_database.cs</DependentUpon>
+    <Compile Include="Migrations\202205181144039_Database.cs" />
+    <Compile Include="Migrations\202205181144039_Database.designer.cs">
+      <DependentUpon>202205181144039_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205181359425_DatabaseIrem.cs" />
+    <Compile Include="Migrations\202205181359425_DatabaseIrem.designer.cs">
+      <DependentUpon>202205181359425_DatabaseIrem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205181510487_asdfg.cs" />
+    <Compile Include="Migrations\202205181510487_asdfg.designer.cs">
+      <DependentUpon>202205181510487_asdfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205182140296_iremssss.cs" />
+    <Compile Include="Migrations\202205182140296_iremssss.designer.cs">
+      <DependentUpon>202205182140296_iremssss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205221353558_yetki2.cs" />
+    <Compile Include="Migrations\202205221353558_yetki2.designer.cs">
+      <DependentUpon>202205221353558_yetki2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205221403033_yetki3.cs" />
+    <Compile Include="Migrations\202205221403033_yetki3.designer.cs">
+      <DependentUpon>202205221403033_yetki3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205221450206_program.cs" />
+    <Compile Include="Migrations\202205221450206_program.designer.cs">
+      <DependentUpon>202205221450206_program.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Adres.cs" />
     <Compile Include="Model\Duyuru.cs" />
+    <Compile Include="Model\DuyuruProgramCizelgesi.cs" />
     <Compile Include="Model\Kart.cs" />
     <Compile Include="Model\Kurs.cs" />
+    <Compile Include="Model\OdemeKursMuzikAleti.cs" />
     <Compile Include="Model\Sepet.cs" />
+    <Compile Include="Model\UyeMuzikAletiKurs.cs" />
     <Compile Include="Model\UyeninKurslari.cs" />
     <Compile Include="Model\Mail.cs" />
     <Compile Include="Model\MuzikAkademisiContext.cs" />
@@ -92,7 +120,6 @@
     <Compile Include="Model\Odev.cs" />
     <Compile Include="Model\UyeKursOdevleri.cs" />
     <Compile Include="Model\ProgramCizelgesi.cs" />
-    <Compile Include="Model\KursunProgramCizelgesi.cs" />
     <Compile Include="Model\Siparis.cs" />
     <Compile Include="Model\MuzikAletiSiparisleri.cs" />
     <Compile Include="Model\Uye.cs" />
@@ -106,8 +133,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202205011113419_database.resx">
-      <DependentUpon>202205011113419_database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205181144039_Database.resx">
+      <DependentUpon>202205181144039_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205181359425_DatabaseIrem.resx">
+      <DependentUpon>202205181359425_DatabaseIrem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205181510487_asdfg.resx">
+      <DependentUpon>202205181510487_asdfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205182140296_iremssss.resx">
+      <DependentUpon>202205182140296_iremssss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205221353558_yetki2.resx">
+      <DependentUpon>202205221353558_yetki2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205221403033_yetki3.resx">
+      <DependentUpon>202205221403033_yetki3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205221450206_program.resx">
+      <DependentUpon>202205221450206_program.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

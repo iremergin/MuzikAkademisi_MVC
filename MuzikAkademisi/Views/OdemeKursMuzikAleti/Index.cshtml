@@ -1,0 +1,68 @@
+﻿@using MuzikAkademisi.Entities.Model
+@model List<OdemeKursMuzikAleti>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+
+<html>
+<head>
+    <style>
+        #btn {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+            border-style: solid;
+            margin-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin:50px 50px; font-size:20px;"><b>~ÖDEME~</b></div>
+    <div style="width: 400px; height: 400px; ">
+        @foreach (var krs in Model)
+        {
+        <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; ">
+            <a href="Kurs/Guncelle/@krs.Kurs.KursId"><img src="@krs.Kurs.KursFotograf" style="width:380px; height:150px; " /></a>
+            <p><b>KURS ADI: @krs.Kurs.KursAdi</b></p>
+            <p><b>FİYAT: @krs.Kurs.KursFiyat</b></p>
+            <p><b>IBAN: TR66543212542125752424242 </b></p>
+
+            <a id="btn" href="/OdemeKursMuzikAleti/Sil/@krs.OdemeKursMuzikAletiId"> İptal Et </a>
+            <a id="btn" href="/Profil/Ekle/@krs.OdemeKursMuzikAletiId"> Ödemeyi Onayla </a>
+
+        </div>
+
+    }
+        </div>
+
+
+
+         <div style="width: 400px; height: 400px; ">
+        @foreach (var okm in Model)
+        {
+
+             <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 50px 20px; border-style: solid;">
+                 <a href="#"><img src="@okm.MuzikAleti.MuzikAletiFotograf" style="width:330px; height:150px; " /></a>
+                 <p><b> @okm.MuzikAleti.MuzikAletiAciklama</b></p>
+                 <p><b> @okm.MuzikAleti.MuzikAletiFiyat</b></p>
+                 <p><b>IBAN: TR66543212542125752424242 </b></p>
+
+                 <a id="btn" href="/OdemeKursMuzikAleti/Sil/@okm.OdemeKursMuzikAletiId"> İptal Et </a>
+                 <a id="btn" href="/Profil/Index/@okm.OdemeKursMuzikAletiId"> Ödemeyi Onayla </a>
+
+             </div>
+     }
+
+
+
+    </div>
+</body>
+</html>
+

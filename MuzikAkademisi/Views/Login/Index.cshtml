@@ -60,7 +60,7 @@ label{
     </style>
 </head>
 <body>
-   
+
     <div id="signin">
         <form action="/Login/GirisYap/" method="post">
             <div class="form-title">~LOGIN~</div>
@@ -76,18 +76,21 @@ label{
             </div>
             <a href="" class="forgot-pw">ŞİFREMİ UNUTTUM</a>
             <a href="/KayitOl/Index" class="forgot-pw">KAYIT OL|</a>
-            <button class="login"><b>GİRİŞ YAP</b></button>
+            <button type="submit" class="login"><b>GİRİŞ YAP</b></button>
             <div class="check">
                 <i class="material-icons">check</i>
             </div>
         </form>
+
+
+    </div>
+    @ViewBag.Message
+
+    <div id="gif">
+        <a href="https://dribbble.com/shots/2197140-New-Material-Text-Fields">
+            <img src="https://d13yacurqjgara.cloudfront.net/users/472930/screenshots/2197140/efsdfsdae.gif" alt="">
+        </a>
     </div>
 
-        <div id="gif">
-            <a href="https://dribbble.com/shots/2197140-New-Material-Text-Fields">
-                <img src="https://d13yacurqjgara.cloudfront.net/users/472930/screenshots/2197140/efsdfsdae.gif" alt="">
-            </a>
-        </div>
-    
 </body>
 </html>

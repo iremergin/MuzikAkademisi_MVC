@@ -76,6 +76,8 @@ C:\Users\Pc\Desktop\MuzıkAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\Muzi
 C:\Users\Pc\Desktop\MuzıkAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Desktop\MuzıkAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.dll
 C:\Users\Pc\Desktop\MuzıkAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.pdb
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.csproj.AssemblyReference.cache
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.dll.config
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\MuzikAkademisi.pdb
@@ -157,7 +159,5 @@ C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\System.Web.
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\Newtonsoft.Json.xml
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\Antlr3.Runtime.pdb
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.csproj.AssemblyReference.cache
-C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.dll
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi\obj\Debug\MuzikAkademisi.pdb

@@ -10,7 +10,7 @@ namespace MuzikAkademisi.Entities.Model
 {
     public class MuzikAkademisiContext:DbContext
     {
-    
+
 
         public MuzikAkademisiContext():base("name=MuzikAkademisiEntities")
         {
@@ -33,7 +33,7 @@ namespace MuzikAkademisi.Entities.Model
             modelBuilder.Configurations.Add(new OdemeMap());
             modelBuilder.Configurations.Add(new UyeKursOdevleriMap());
             modelBuilder.Configurations.Add(new OdevMap());
-            modelBuilder.Configurations.Add(new KursunProgramCizelgesiMap());
+            
             modelBuilder.Configurations.Add(new ProgramCizelgesiMap());
             modelBuilder.Configurations.Add(new MuzikAletiSiparisleriMap());
             modelBuilder.Configurations.Add(new SiparisMap());
@@ -41,6 +41,9 @@ namespace MuzikAkademisi.Entities.Model
             modelBuilder.Configurations.Add(new MuzikAletiKursYorumlariMap());
             modelBuilder.Configurations.Add(new YorumMap());
             modelBuilder.Configurations.Add(new SepetMap());
+            modelBuilder.Configurations.Add(new UyeMuzikAletiKursMap());
+            modelBuilder.Configurations.Add(new OdemeKursMuzikAletiMap());
+
         }
 
 
@@ -58,12 +61,18 @@ namespace MuzikAkademisi.Entities.Model
         public DbSet<Odev> Odev { get; set; }
         public DbSet<UyeKursOdevleri> UyeKursOdevleri{ get; set; }
         public DbSet<ProgramCizelgesi> ProgramCizelgesi{ get; set; }
-        public DbSet<KursunProgramCizelgesi> KursunProgramCizelgesi{ get; set; }
+        
         public DbSet<Siparis> Siparis{ get; set; }
         public DbSet<MuzikAletiSiparisleri> MuzikAletiSiparisleri{ get; set; }
         public DbSet<Uye> Uye{ get; set; }
         public DbSet<Yorum> Yorum{ get; set; }
         public DbSet<MuzikAletiKursYorumlari> MuzikAletiKursYorumlari{ get; set; }
         public DbSet<Sepet> Sepet{ get; set; }
+        public DbSet<UyeMuzikAletiKurs> UyeMuzikAletiKurs{ get; set; }
+        public DbSet<OdemeKursMuzikAleti> OdemeKursMuzikAleti{ get; set; }
+        
+
+
+
     }
 }

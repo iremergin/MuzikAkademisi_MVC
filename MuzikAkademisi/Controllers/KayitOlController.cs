@@ -9,6 +9,7 @@ namespace MuzikAkademisi.Controllers
 {
     public class KayitOlController : Controller
     {
+        [AllowAnonymous]
         // GET: KayitOl
         public ActionResult Index()
         {

@@ -12,12 +12,7 @@ namespace MuzikAkademisi.Controllers
 
         MuzikAkademisiContext db = new MuzikAkademisiContext();
         // GET: Magaza
-        public ActionResult Index()
-        {
-            var muzikAletleri = db.MuzikAleti.AsNoTracking().Where(m => m.MuzikAletiDurumu == true);
-
-            return View(muzikAletleri.ToList());
-        }
+     
 
         [HttpGet]
         public ActionResult Ekle()
@@ -63,6 +58,19 @@ namespace MuzikAkademisi.Controllers
             mzk.MuzikAletiDurumu = true;
             db.SaveChanges();
             return RedirectToAction("Index");
-        }    
+        }
+
+
+        [AllowAnonymous]
+        public ActionResult Index()
+        {
+            var muzikAletleri = db.MuzikAleti.AsNoTracking().Where(m => m.MuzikAletiDurumu == true);
+
+            return View(muzikAletleri.ToList());
+        }
+    
+
     }
+
+
 }

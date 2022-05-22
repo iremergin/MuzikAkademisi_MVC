@@ -1,5 +1,5 @@
 ﻿@using MuzikAkademisi.Entities.Model
-@model List<Kurs>
+@model List<UyeMuzikAletiKurs>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
@@ -11,19 +11,44 @@
 <body>
 
     <div style="margin:50px 50px; font-size:20px;"><b>~AKTİF OLARAK ALINAN KURSLAR~</b></div>
-    <div style="width:350px; height:350px; background-color:palevioletred; margin:70px 20px; ">
+    <div style="width:400px; height:400px; ">
 
         @foreach (var krs in Model)
         {
-<div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
-    <a href="#"><img src="@krs.KursFotograf" style="width:330px; height:150px; " /></a>
-    <p><b>KURS ADI: @krs.KursAdi</b></p>
+<div style="width: 400px; height: 350px; background-color: palevioletred; margin: 20px 20px; border-style: solid;">
+    <a href="#"><img src="@krs.Kurs.KursFotograf" style="width:330px; height:150px; " /></a>
+    <p><b>KURS ADI: @krs.Kurs.KursAdi</b></p>
 
 
-</div>}
+</div>
+       
 
 
-    </div>
+    }
+    </div> 
+    
+    
+      <div style="margin:50px 50px; font-size:20px;"><b>~ ALINAN MÜZİK ALETLERİ~</b></div>
+      <div style="width:400px; height:400px;">
+
+          @foreach (var mzk in Model)
+          {
+              
+              <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; ">
+                      <a href="#"><img src="@mzk.MuzikAleti.MuzikAletiFotograf" style="width:330px; height:150px; " /></a>
+                      <p><b> @mzk.MuzikAleti.MuzikAletiAciklama</b></p>
+
+
+                  </div>  
+          }
+
+
+
+      </div>
+
+
+    
+
 
 </body>
 </html>

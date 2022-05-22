@@ -13,6 +13,7 @@ namespace MuzikAkademisi.Entities.Model
         public virtual ICollection<UyeninKurslari> UyeninKurslaris { get; set; }
         public virtual ICollection<UyeninMuzikAletleri> UyeninMuzikAletleris { get; set; }
         public virtual ICollection<UyeKursOdevleri> UyeKursOdevleris { get; set; }
+        public virtual ICollection<UyeMuzikAletiKurs> UyeMuzikAletiKurs { get; set; }
         public string UyeAdi { get; set; }
         public string UyeSoyadi { get; set; }
         public string UyeKullaniciAdi { get; set; }
@@ -30,7 +31,8 @@ namespace MuzikAkademisi.Entities.Model
        // public virtual ICollection<Kurs> Egitmens { get; set; }
 
         public virtual ICollection<Kart> Karts { get; set; }
-       
+        public virtual ICollection<Sepet> Sepets { get; set; }
+        public virtual ICollection<ProgramCizelgesi> ProgramCizelgesis { get; set; }
 
 
     }
