@@ -43,6 +43,7 @@ namespace MuzikAkademisi.Entities.Model
             modelBuilder.Configurations.Add(new SepetMap());
             modelBuilder.Configurations.Add(new UyeMuzikAletiKursMap());
             modelBuilder.Configurations.Add(new OdemeKursMuzikAletiMap());
+            modelBuilder.Configurations.Add(new YuklenenOdevlerMap());
 
         }
 
@@ -70,7 +71,11 @@ namespace MuzikAkademisi.Entities.Model
         public DbSet<Sepet> Sepet{ get; set; }
         public DbSet<UyeMuzikAletiKurs> UyeMuzikAletiKurs{ get; set; }
         public DbSet<OdemeKursMuzikAleti> OdemeKursMuzikAleti{ get; set; }
-        
+
+        public DbSet<YuklenenOdevler> YuklenenOdevler { get; set; }
+
+
+
 
 
 

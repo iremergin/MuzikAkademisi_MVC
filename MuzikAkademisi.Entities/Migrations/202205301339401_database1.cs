@@ -12,7 +12,7 @@
                 c => new
                     {
                         YuklenenOdevlerId = c.Int(nullable: false, identity: true),
-                        OdevId = c.Int(nullable: false),
+                        OdevId = c.Int(nullable: true),
                         UyeId = c.Int(nullable: false),
                         DosyaYolu = c.String(),
                     })

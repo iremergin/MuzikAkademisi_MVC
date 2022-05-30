@@ -17,6 +17,13 @@
         <div style="width:500px; height:500px;"><img src="@ViewBag.OdevResim" width="500px" height="300px" />
         <p><b> ÖDEV ADI: @ViewBag.OdevAdi</b></p>
         <p><b>NOT: @ViewBag.Not</b></p>
+        <p><b>NOT: @ViewBag.dosyaadi</b></p>
+        @using (Html.BeginForm("OdevYukleme", "Odev", FormMethod.Post, new { enctype = "multipart/form-data" })) { 
+        <p>Ödev Yükle: <input type="file" name="person" /></p>
+        <button>Kaydet</button>
+        }
+        
+        
         </div>
 
     </div>

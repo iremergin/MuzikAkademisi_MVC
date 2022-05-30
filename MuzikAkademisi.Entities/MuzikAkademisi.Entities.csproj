@@ -106,6 +106,14 @@
     <Compile Include="Migrations\202205301339401_database1.designer.cs">
       <DependentUpon>202205301339401_database1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205302127435_database2.cs" />
+    <Compile Include="Migrations\202205302127435_database2.designer.cs">
+      <DependentUpon>202205302127435_database2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205302143174_lutfenol.cs" />
+    <Compile Include="Migrations\202205302143174_lutfenol.designer.cs">
+      <DependentUpon>202205302143174_lutfenol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Adres.cs" />
     <Compile Include="Model\Duyuru.cs" />
@@ -162,6 +170,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205301339401_database1.resx">
       <DependentUpon>202205301339401_database1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205302127435_database2.resx">
+      <DependentUpon>202205302127435_database2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205302143174_lutfenol.resx">
+      <DependentUpon>202205302143174_lutfenol.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

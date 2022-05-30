@@ -17,6 +17,7 @@ namespace MuzikAkademisi.Entities.Mapping
                 this.ToTable("tblYuklenenOdevler");
                 this.Property(p => p.YuklenenOdevlerId).HasColumnType("int");
                 this.Property(p => p.YuklenenOdevlerId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+                this.Property(p => p.DosyaYolu).HasColumnType("nvarchar");
 
 
                 this.HasRequired(p => p.Uye).WithMany(p => p.YuklenenOdevler).HasForeignKey(p => p.UyeId);

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MuzikAkademisi.Entities.Model
 {
     public class Odev
     {
+        [Key]
         public int OdevId { get; set; }
         public virtual ICollection<UyeKursOdevleri> UyeKursOdevleris { get; set; }
         public virtual ICollection<YuklenenOdevler> YuklenenOdevler { get; set; }
