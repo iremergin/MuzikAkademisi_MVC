@@ -73,6 +73,7 @@
     <Compile Include="Mapping\UyeMap.cs" />
     <Compile Include="Mapping\MuzikAletiKursYorumlariMap.cs" />
     <Compile Include="Mapping\YorumMap.cs" />
+    <Compile Include="Mapping\YuklenenOdevlerMap.cs" />
     <Compile Include="Migrations\202205181144039_Database.cs" />
     <Compile Include="Migrations\202205181144039_Database.designer.cs">
       <DependentUpon>202205181144039_Database.cs</DependentUpon>
@@ -101,6 +102,10 @@
     <Compile Include="Migrations\202205221450206_program.designer.cs">
       <DependentUpon>202205221450206_program.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205301339401_database1.cs" />
+    <Compile Include="Migrations\202205301339401_database1.designer.cs">
+      <DependentUpon>202205301339401_database1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Adres.cs" />
     <Compile Include="Model\Duyuru.cs" />
@@ -126,6 +131,7 @@
     <Compile Include="Model\UyeninAdresleri.cs" />
     <Compile Include="Model\Yorum.cs" />
     <Compile Include="Model\MuzikAletiKursYorumlari.cs" />
+    <Compile Include="Model\YuklenenOdevler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205221450206_program.resx">
       <DependentUpon>202205221450206_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205301339401_database1.resx">
+      <DependentUpon>202205301339401_database1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

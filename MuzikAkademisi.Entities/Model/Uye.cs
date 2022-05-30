@@ -14,6 +14,7 @@ namespace MuzikAkademisi.Entities.Model
         public virtual ICollection<UyeninMuzikAletleri> UyeninMuzikAletleris { get; set; }
         public virtual ICollection<UyeKursOdevleri> UyeKursOdevleris { get; set; }
         public virtual ICollection<UyeMuzikAletiKurs> UyeMuzikAletiKurs { get; set; }
+        public virtual ICollection<YuklenenOdevler> YuklenenOdevler { get; set; }
         public string UyeAdi { get; set; }
         public string UyeSoyadi { get; set; }
         public string UyeKullaniciAdi { get; set; }

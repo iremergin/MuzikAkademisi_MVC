@@ -1,0 +1,60 @@
+﻿@using MuzikAkademisi.Entities.Model
+@model List<Odev>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+<html>
+<head>
+   
+
+    @*<script>/*const { Alert } = require("bootstrap");*/
+
+
+
+        window.onload = function gizle() {
+            var bilgiYetki = document.getElementById("yetkiBilgi").value;
+            var buton = document.getElementsByClassName("btn");
+            var arrFromsList = Array.prototype.slice.call(buton);
+
+            if (bilgiYetki == "K") {
+
+
+                for (var i = 0; i <= arrFromsList.length; i++) {
+
+                    arrFromsList[i].style.display = "none";
+
+                }
+                alert("Kullanıcı sisteme giriş yaptı.")
+            }
+            else {
+
+                Alert("Admin sisteme giriş yaptı.")
+
+
+            };
+
+
+        }</script>*@
+
+</head>
+<body>
+
+    <div style="width:400px; height:400px; ">
+        @foreach (var odev in Model)
+        {
+<a style="color:black; text-decoration:none;"  href="/Odev/Detay/@odev.OdevId"><div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px; border-style: solid; ">
+    <img src="@odev.OdevFotograf" style="width: 400px; height: 150px; " />
+    <p><b>@odev.OdevAdi</b></p>
+    <p><b>NOT: @odev.OdevAciklama</b></p>
+
+    
+</div></a>}
+
+
+    </div>
+
+    @*<button id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>*@
+</body>
+</html>
+

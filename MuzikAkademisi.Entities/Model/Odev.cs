@@ -7,6 +7,7 @@ namespace MuzikAkademisi.Entities.Model
     {
         public int OdevId { get; set; }
         public virtual ICollection<UyeKursOdevleri> UyeKursOdevleris { get; set; }
+        public virtual ICollection<YuklenenOdevler> YuklenenOdevler { get; set; }
         public string OdevAdi{ get; set; }
         public string OdevAciklama{ get; set; }
         public string OdevFotograf{ get; set; }
