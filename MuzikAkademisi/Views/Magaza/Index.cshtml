@@ -1,7 +1,7 @@
 ﻿@using MuzikAkademisi.Entities.Model
 @model List<MuzikAleti>
 @{ ViewBag.Title = "Index";
-   Layout = "~/Views/Shared/_AnasayfaLayout.cshtml"; 
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
  }
 
 <html>
@@ -31,9 +31,22 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 5px 1700px;
+            float: right;
+            margin: 10px 5px;
             border-style: solid;
             border-radius: 10px;
+
+        }
+
+        .kapsayici {
+            margin-top: 100px;
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+           
         }
     </style>
 
@@ -73,24 +86,28 @@
 <body>
     <a id="ekle" class="btn" href="/Magaza/Ekle/"> Ekle </a>
     <a id="ekle" href="/Sepet/Index/">Sepet</a>
-
-    <div style="width:400px; height:400px;  ">
+    <div class="kapsayici">
         @foreach (var mzk in Model)
         {
-        <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px; border-style: solid; ">
-            <a href="Magaza/Guncelle/@mzk.MuzikAletiFotograf"><img src="@mzk.MuzikAletiFotograf" style="width: 400px; height: 150px; " /></a>
-            <p><b>@mzk.MuzikAletiAciklama</b></p>
-            <p><b>@mzk.MuzikAletiFiyat</b></p>
+    <div class="container" style="width: 500px; height: 500px;  ">
+        <div style="width:400px; height:400px;  ">
+            <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px; border-style: solid; border-radius: 20px; ">
+                <a href="Magaza/Guncelle/@mzk.MuzikAletiFotograf"><img src="@mzk.MuzikAletiFotograf" style="width: 400px; height: 150px; border-radius: 17px;" /></a>
+                <p><b>@mzk.MuzikAletiAciklama</b></p>
+                <p><b>@mzk.MuzikAletiFiyat</b></p>
+                <div style="width:400px; height:200px; margin-top:40px; ">
+                    <a id="btn" class="btn" href="/Magaza/Sil/@mzk.MuzikAletiId"> Sil </a>
+                    <a id="btn" class="btn" href="/Magaza/Guncelle/@mzk.MuzikAletiId"> Güncelle </a>
+                    <a id="btn" href="/Sepet/Ekle2/@mzk.MuzikAletiId"> Sepete Ekle</a>
+                    </div>
+                </div>
 
-            <a id="btn" class="btn" href="/Magaza/Sil/@mzk.MuzikAletiId"> Sil </a>
-            <a id="btn" class="btn" href="/Magaza/Guncelle/@mzk.MuzikAletiId"> Güncelle </a>
-            <a id="btn" href="/Sepet/Ekle2/@mzk.MuzikAletiId"> Sepete Ekle</a>
-        </div>
-        }
 
 
+            </div>
+        </div>}
+
+        <button style="display:none;" id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
     </div>
-
-    <button id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
 </body>
 </html>

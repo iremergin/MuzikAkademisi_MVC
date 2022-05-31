@@ -1,0 +1,94 @@
+﻿@using MuzikAkademisi.Entities.Model
+@model List<YuklenenOdevler>
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+<html>
+<head>
+    <style>
+        #islem {
+            background-color: palevioletred;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            border-radius: 10px;
+        }
+    </style>
+
+    <script>/*const { Alert } = require("bootstrap");*/
+
+
+
+        window.onload = function gizle() {
+            var bilgiYetki = document.getElementById("yetkiBilgi").value;
+            var buton = document.getElementsByClassName("btn");
+            var arrFromsList = Array.prototype.slice.call(buton);
+
+            if (bilgiYetki == "K") {
+
+
+                for (var i = 0; i <= arrFromsList.length; i++) {
+
+                    arrFromsList[i].style.display = "none";
+
+                }
+                alert("Kullanıcı sisteme giriş yaptı.");
+            }
+            else {
+
+                alert("Admin sisteme giriş yaptı.");
+
+
+            };
+
+
+        }</script>
+
+</head>
+<body>
+    <div style="font-family:'Century Gothic'">
+
+        <div style="text-align: center; color: black; background-color: palevioletred;margin-bottom:5px">
+            <h2><b> YÜKLENEN ÖDEVLER </b></h2>
+        </div>
+
+        <table class="table table-bordered" style=" text-align: center; padding:10px 20px;">
+            <thead style=" color: black; background-color: palevioletred;">
+                <tr>
+                    <th style="padding: 10px 120px 10px 120px;">ID</th>
+                    <th style="padding: 10px 120px 10px 120px; ">ÖDEV ADI</th>
+                    <th style="padding: 10px 120px 10px 120px; ">DOSYA YOLU</th>
+                    <th style="padding: 10px 120px 10px 120px; ">ÜYE AD - SOYAD</th>
+                    <th style="padding: 10px 120px 10px 120px; ">ÜYE MAİL</th>
+                    <th style="padding: 10px 120px 10px 120px; ">İŞLEMLER</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (YuklenenOdevler odev in Model)
+                {
+
+                <tr>
+
+                    <th>@odev.YuklenenOdevlerId</th>
+                    <th>@odev.Odev.OdevAdi</th>
+                    <th>@odev.DosyaYolu</th>
+                    <th>@odev.Uye.UyeAdi @odev.Uye.UyeSoyadi</th>
+                    <th>@odev.Uye.UyeMail</th>
+                    <th>
+                        <a id="islem" class="btn" href="/Odev/odevIndir2/@odev.YuklenenOdevlerId">Ödevi İndir</a>
+
+                    </th>
+                </tr>
+}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+

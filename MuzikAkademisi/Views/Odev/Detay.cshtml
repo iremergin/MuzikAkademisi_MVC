@@ -7,25 +7,60 @@
 
 <html>
 <head>
+    <style>
+        #ekle {
+            background-color: white;
+            border: none;
+            color: palevioletred;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 50px;
+            margin-right: 50px;
+            float: right;
+            border-radius: 10px;
+            border-style: solid;
+        }
+    </style>
+
 </head>
 <body>
 
+     <a id="ekle" class="btn" href="~/Odev/Listele/@ViewBag.OdevId">Ödevleri Listele</a>
     <div style="width:1860px; height:800px; ">
-        
-
     <div style="width: 1860px; height: 800px; background-color: palevioletred; margin: 20px; border-style: solid; font-family:Cambria; font-size:20px; ">
-        <div style="width:500px; height:500px;"><img src="@ViewBag.OdevResim" width="500px" height="300px" />
-        <p><b> ÖDEV ADI: @ViewBag.OdevAdi</b></p>
-        <p><b>NOT: @ViewBag.Not</b></p>
-        <p><b>NOT: @ViewBag.dosyaadi</b></p>
-        @using (Html.BeginForm("OdevYukleme", "Odev", FormMethod.Post, new { enctype = "multipart/form-data" })) { 
-        <p>Ödev Yükle: <input type="file" name="person" /></p>
-        <button>Kaydet</button>
-        }
+        <div style="width: 1000px; height: 300px; display: flex; justify-content: center; flex-wrap: wrap; "><div><img src="@ViewBag.OdevResim" width="500px" height="300px" /></div>
+        <div style="margin-left: 100px;  ">
+        <p><b> ÖDEV ADI:</b> @ViewBag.OdevAdi</p>
+        <p><b>NOT:</b> @ViewBag.Not</p>
+        <p><b>VERİLME TARİHİ:</b> @ViewBag.OdevVerilmeTarihi</p>
+        <p><b>TESLİM TARİHİ:</b> @ViewBag.OdevTeslimTarihi</p>
+             <p><b>DOSYA YOLU: </b>@ViewBag.dosyaYolu </p>
+
+        </div>
+       
+
+    
+  
         
         
         </div>
+        <div>
+            @using (Html.BeginForm("OdevYukleme", "Odev", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+        <p><b>Ödev Yükle:</b> <input type="file" name="person" /></p>
 
+      <p>@Session["Mesaj"].ToString() @ViewBag.Mesaj <img src=@ViewBag.Tik width="30px" height="30px" /></p>
+
+         <div><p>
+    <button style="width: 100px; height: 50px; margin-right: 5px; margin-left: 10px; background-color: azure; color: palevioletred; border-radius: 10px; border-color: palevioletred;"><b>KAYDET</b></button>
+
+
+    <a href="/Odev/odevIndir" style="text-decoration:none;"> <button disabled="disabled" style=" width: 100px; height: 50px; margin-right: 5px; margin-left: 10px; background-color:azure; color: palevioletred; border-radius: 10px; border-color:palevioletred;"><b>İNDİR</b></button></a>
+</p></div> }
+        </div>
     </div>
 
 

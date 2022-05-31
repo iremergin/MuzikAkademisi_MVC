@@ -152,6 +152,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Image\accept.png" />
+    <Content Include="Image\remove.png" />
+    <Content Include="Image\turn-off.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -200,10 +203,12 @@
     <Content Include="Views\ProgramCizelgesi\Guncelle.cshtml" />
     <Content Include="Views\Odev\Index.cshtml" />
     <Content Include="Views\Odev\Detay.cshtml" />
+    <Content Include="Views\Odev\Ekle.cshtml" />
+    <Content Include="Views\Odev\Guncelle.cshtml" />
+    <Content Include="Views\Odev\Listele.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Image\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

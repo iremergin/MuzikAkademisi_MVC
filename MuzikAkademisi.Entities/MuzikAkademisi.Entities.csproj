@@ -114,6 +114,10 @@
     <Compile Include="Migrations\202205302143174_lutfenol.designer.cs">
       <DependentUpon>202205302143174_lutfenol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205311256552_databasee.cs" />
+    <Compile Include="Migrations\202205311256552_databasee.designer.cs">
+      <DependentUpon>202205311256552_databasee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Adres.cs" />
     <Compile Include="Model\Duyuru.cs" />
@@ -176,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205302143174_lutfenol.resx">
       <DependentUpon>202205302143174_lutfenol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205311256552_databasee.resx">
+      <DependentUpon>202205311256552_databasee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

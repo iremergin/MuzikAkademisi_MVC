@@ -15,6 +15,6 @@ namespace MuzikAkademisi.Entities.Model
         public string OdevFotograf{ get; set; }
         public DateTime OdevVerilmeTarihi { get; set; }
         public DateTime OdevTeslimTarihi { get; set; }
-        public char OdevDurumu{ get; set; }
+        public bool OdevDurumu{ get; set; }
     }
 }

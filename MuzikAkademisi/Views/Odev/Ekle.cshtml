@@ -1,0 +1,63 @@
+﻿@model MuzikAkademisi.Entities.Model.Odev
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+<html>
+<head>
+    <style>
+        #button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 230px;
+            border-radius: 10px;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+<div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+    <div style="text-align:center; margin-top:50px;" ><b>Bilgileri Ekleyiniz...</b></div>
+ 
+    <br />
+    <div style="width:350px; height:350px; margin:30px 10px;">
+    @using (Html.BeginForm("Ekle", "Odev", FormMethod.Post))
+    {
+        @Html.Label("Ödev Id ")
+        @Html.TextBoxFor(x => x.OdevId, new { @class = "form-control" ,@readonly ="readonly" })
+        <br />
+        <br />
+        @Html.Label("Fotoğraf: ")
+        @Html.TextBoxFor(m => m.OdevFotograf, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Ödev Adı: ")
+        @Html.TextBoxFor(m => m.OdevAdi, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Ödev Açıklama: ")
+        @Html.TextBoxFor(x => x.OdevAciklama, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Ödev Verilme Tarihi: ")
+        @Html.TextBoxFor(x => x.OdevVerilmeTarihi, new { @class = "form-control" })
+         <br />
+        <br />
+        @Html.Label("Ödev Teslim Tarihi: ")
+        @Html.TextBoxFor(x => x.OdevTeslimTarihi, new { @class = "form-control" })
+
+        <button id="button"> <b>Ekle</b></button>
+    }
+        </div>
+</div>
+ </body>
+</html>
+
+
+

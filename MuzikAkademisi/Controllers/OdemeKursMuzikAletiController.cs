@@ -33,7 +33,7 @@ namespace MuzikAkademisi.Controllers
             Kurs kurss = db.Kurs.Find(id);
             okm.KursId = 6;
             okm.MuzikAletiId =1;
-            okm.OdemeId = 1;
+            okm.OdemeId = 2;
             db.OdemeKursMuzikAleti.Add(okm);
             db.SaveChanges();
 

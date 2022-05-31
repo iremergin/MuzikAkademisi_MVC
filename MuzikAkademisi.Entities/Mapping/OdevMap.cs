@@ -19,8 +19,8 @@ namespace MuzikAkademisi.Entities.Mapping
             this.Property(p => p.OdevAdi).HasColumnType("varchar").HasMaxLength(100);
             this.Property(p => p.OdevAciklama).HasColumnType("varchar").HasMaxLength(100);
             this.Property(p => p.OdevFotograf).HasColumnType("varchar").HasMaxLength(200);
-            this.Property(p => p.OdevVerilmeTarihi).HasColumnType("date");
-            this.Property(p => p.OdevTeslimTarihi).HasColumnType("date");
+            this.Property(p => p.OdevVerilmeTarihi).HasColumnType("datetime");
+            this.Property(p => p.OdevTeslimTarihi).HasColumnType("datetime");
 
            
         }
