@@ -6,6 +6,8 @@
 }
 <html>
 <head>
+
+
     <style>
         #btn {
             background-color: white;
@@ -21,56 +23,183 @@
             border-style: solid;
             border-style: solid;
         }
+
+        .kapsayici {
+            margin-top: 100px;
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
     </style>
+
+
+
+    <script>
+
+        //window.onload = function gizle() {
+
+
+        //    //var muzikId = document.getElementById("muzikId").value;
+
+        //    var muziks = document.getElementsByClassName(null);
+           
+
+        //    if (muziks == null) {
+
+        //        alert("Gitmeee Kaaal")
+
+        //    }
+
+        //    var arrFromsList = Array.prototype.slice.call(muziks);
+        //    for (var i = 0; i <= arrFromsList.length; i++) {
+                
+        //          arrFromsList[i].style.display = "none";
+        //        alert("Allah belaların versin sebepsiz yere çekip gidenlerin!!!!!!");
+        //    }
+            
+           
+
+        //    //var kurs = document.getElementsByClassName("kurslars");
+
+
+
+
+        //    //if (bilgiYetki == "K") {
+
+
+        //    //    
+        //    //    alert("Kullanıcı sisteme giriş yaptı.")
+        //    //}
+        //    //else {
+
+        //    //    Alert("Admin sisteme giriş yaptı.")
+
+
+        //    //};
+
+        //};
+    </script>
+
 </head>
 
 <body>
     <div style="margin:50px 50px; font-size:20px;"><b>~SEPET~</b></div>
 
-    <div style="width: 400px; height: 400px;  ">
-
-
-        @foreach (var krs in Model)
+    <div class="kapsayici">
+        @foreach (var mzk in Model)
         {
-        <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; ">
+            try
+            {
 
-            <a href="#"><img src="@krs.Kurs.KursFotograf" style="width:330px; height:150px; " /></a>
-            <p><b>KURS ADI: @krs.Kurs.KursAdi</b></p>
-            <p><b>KURS FİYATI: @krs.Kurs.KursFiyat</b></p>
 
-            <a id="btn" href="/Sepet/Sil/@krs.SepetId"> Ürünü Sil </a>
-            <a id="btn" href="/OdemeKursMuzikAleti/Ekle/@krs.SepetId"> Sepeti Onayla </a>
+
+                if (mzk.MuzikAletiId > 0)
+                {
+
+
+    <div class="@mzk.MuzikAletiId" style="width: 500px; height: 500px;">
+        <div style="width: 400px; height: 400px; ">
+            <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; border-radius: 20px;">
+                <a href="#"><img src="@mzk.MuzikAleti.MuzikAletiFotograf" style="width: 400px; height: 150px; border-radius: 17px; " /></a>
+                <p><b> @mzk.MuzikAleti.MuzikAletiAciklama</b></p>
+                <p><b> @mzk.MuzikAleti.MuzikAletiFiyat</b></p>
+
+                <a id="btn" href="/Sepet/Sil/@mzk.SepetId"> Ürünü Sil </a>
+                <a id="btn" href="/OdemeKursMuzikAleti/Ekle2/@mzk.MuzikAletiId"> Sepeti Onayla </a>
+
+            </div>
+        </div>
+    </div> }
+
+
+
+
+
+
+
+
+                if (mzk.KursId > 0)
+                {
+
+    <div  style="width: 500px; height: 500px;  ">
+        <div style="width: 400px; height: 400px;  ">
+
+            <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; border-radius: 20px;">
+
+                <a href="#"><img src="@mzk.Kurs.KursFotograf" style="width: 400px; height: 150px; border-radius: 17px; " /></a>
+                <p><b>KURS ADI: @mzk.Kurs.KursAdi</b></p>
+                <p><b>KURS FİYATI: @mzk.Kurs.KursFiyat</b></p>
+
+                <a id="btn" href="/Sepet/Sil/@mzk.SepetId"> Ürünü Sil </a>
+                <a id="btn" href="/OdemeKursMuzikAleti/Ekle/@mzk.KursId"> Sepeti Onayla </a>
+
+
+            </div>
+
+
 
 
         </div>
-        
-   
-        
+    </div>      
+                }
+            }
+
+
+            catch
+            {
+
+            }
+
         }
     </div>
 
 
-
-
-      <div style="width: 400px; height: 400px;  ">
-
-
-        @foreach (var mzk in Model)
+    @*<div class="kapsayici">
+        @foreach (var krs in Model)
         {
-          <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid;">
-              <a href="#"><img src="@mzk.MuzikAleti.MuzikAletiFotograf" style="width:330px; height:150px; " /></a>
-              <p><b> @mzk.MuzikAleti.MuzikAletiAciklama</b></p>
-              <p><b> @mzk.MuzikAleti.MuzikAletiFiyat</b></p>
 
-              <a id="btn" href="/Sepet/Sil/@mzk.SepetId"> Ürünü Sil </a>
-              <a id="btn" href="/OdemeKursMuzikAleti/Ekle/@mzk.SepetId"> Sepeti Onayla </a>
+            try
+            {
+                if( krs.KursId > 0)
+                {
 
-          </div>
-        
+    <div class="@krs.KursId" style="width: 500px; height: 500px;  ">
+        <div style="width: 400px; height: 400px;  ">
 
-        
-        }
-    </div>
+            <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; border-radius: 20px;">
+
+                <a href="#"><img src="@krs.Kurs.KursFotograf" style="width: 400px; height: 150px; border-radius: 17px; " /></a>
+                <p><b>KURS ADI: @krs.Kurs.KursAdi</b></p>
+                <p><b>KURS FİYATI: @krs.Kurs.KursFiyat</b></p>
+
+                <a id="btn" href="/Sepet/Sil/@krs.SepetId"> Ürünü Sil </a>
+                <a id="btn" href="/OdemeKursMuzikAleti/Ekle/@krs.SepetId"> Sepeti Onayla </a>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div> }
+
+                        
+                    }
+
+
+                    catch
+                    {
+
+
+
+                    }
+                }
+
+    </div>*@
 
 </body>
 </html>

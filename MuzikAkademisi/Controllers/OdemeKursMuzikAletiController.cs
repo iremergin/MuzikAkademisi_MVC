@@ -26,28 +26,29 @@ namespace MuzikAkademisi.Controllers
             return RedirectToAction("Index");
         }
 
+        //Kurs Ekleme
         public ActionResult Ekle(int id)
         {
             OdemeKursMuzikAleti okm = new OdemeKursMuzikAleti();
 
             Kurs kurss = db.Kurs.Find(id);
-            okm.KursId = 6;
-            okm.MuzikAletiId =1;
-            okm.OdemeId = 2;
+            okm.KursId = kurss.KursId;
+            
             db.OdemeKursMuzikAleti.Add(okm);
             db.SaveChanges();
 
             return RedirectToAction("Index");
         }
-        //login olan üyeden al
+       
+
+
+        //Muzik Aleti Ekleme
         public ActionResult Ekle2(int id)
         {
             OdemeKursMuzikAleti okm = new OdemeKursMuzikAleti();
 
             MuzikAleti muzik = db.MuzikAleti.Find(id);
             okm.MuzikAletiId = muzik.MuzikAletiId;
-            okm.KursId = 6;
-  
 
             db.OdemeKursMuzikAleti.Add(okm);
             db.SaveChanges();

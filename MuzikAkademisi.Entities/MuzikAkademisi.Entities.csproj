@@ -118,6 +118,42 @@
     <Compile Include="Migrations\202205311256552_databasee.designer.cs">
       <DependentUpon>202205311256552_databasee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206041748056_null.cs" />
+    <Compile Include="Migrations\202206041748056_null.designer.cs">
+      <DependentUpon>202206041748056_null.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042001236_sad.cs" />
+    <Compile Include="Migrations\202206042001236_sad.designer.cs">
+      <DependentUpon>202206042001236_sad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042003083_sadd.cs" />
+    <Compile Include="Migrations\202206042003083_sadd.designer.cs">
+      <DependentUpon>202206042003083_sadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042006178_saddd.cs" />
+    <Compile Include="Migrations\202206042006178_saddd.designer.cs">
+      <DependentUpon>202206042006178_saddd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042007088_sadddd.cs" />
+    <Compile Include="Migrations\202206042007088_sadddd.designer.cs">
+      <DependentUpon>202206042007088_sadddd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042007402_saddddd.cs" />
+    <Compile Include="Migrations\202206042007402_saddddd.designer.cs">
+      <DependentUpon>202206042007402_saddddd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042009215_saddddddd.cs" />
+    <Compile Include="Migrations\202206042009215_saddddddd.designer.cs">
+      <DependentUpon>202206042009215_saddddddd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042020474_saddddddd1.cs" />
+    <Compile Include="Migrations\202206042020474_saddddddd1.designer.cs">
+      <DependentUpon>202206042020474_saddddddd1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206042058412_ol.cs" />
+    <Compile Include="Migrations\202206042058412_ol.designer.cs">
+      <DependentUpon>202206042058412_ol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Adres.cs" />
     <Compile Include="Model\Duyuru.cs" />
@@ -183,6 +219,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205311256552_databasee.resx">
       <DependentUpon>202205311256552_databasee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206041748056_null.resx">
+      <DependentUpon>202206041748056_null.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042001236_sad.resx">
+      <DependentUpon>202206042001236_sad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042003083_sadd.resx">
+      <DependentUpon>202206042003083_sadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042006178_saddd.resx">
+      <DependentUpon>202206042006178_saddd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042007088_sadddd.resx">
+      <DependentUpon>202206042007088_sadddd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042007402_saddddd.resx">
+      <DependentUpon>202206042007402_saddddd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042009215_saddddddd.resx">
+      <DependentUpon>202206042009215_saddddddd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042020474_saddddddd1.resx">
+      <DependentUpon>202206042020474_saddddddd1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206042058412_ol.resx">
+      <DependentUpon>202206042058412_ol.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

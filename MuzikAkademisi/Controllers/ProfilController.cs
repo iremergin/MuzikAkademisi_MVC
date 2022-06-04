@@ -40,8 +40,8 @@ namespace MuzikAkademisi.Controllers
             int kullaiciId = Convert.ToInt32(kId);
 
             Kurs kurss = db.Kurs.Find(id);
-            uma.KursId = 6;
-            uma.MuzikAletiId = 1;
+            uma.KursId = kurss.KursId;
+            
             uma.UyeId = kullaiciId;
             db.UyeMuzikAletiKurs.Add(uma);
             db.SaveChanges();
@@ -49,5 +49,21 @@ namespace MuzikAkademisi.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult Ekle2(int id)
+        {
+            UyeMuzikAletiKurs uma = new UyeMuzikAletiKurs();
+            string kId = @Session["UyeId"].ToString();
+            int kullaiciId = Convert.ToInt32(kId);
+
+            MuzikAleti mzkAlet = db.MuzikAleti.Find(id);
+            uma.MuzikAletiId = mzkAlet.MuzikAletiId;
+
+            uma.UyeId = kullaiciId;
+            db.UyeMuzikAletiKurs.Add(uma);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

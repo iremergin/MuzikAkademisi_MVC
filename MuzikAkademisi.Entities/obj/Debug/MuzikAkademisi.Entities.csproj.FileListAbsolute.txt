@@ -21,3 +21,12 @@ C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\De
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.database2.resources
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.lutfenol.resources
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.databasee.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations._null.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.sad.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.sadd.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.saddd.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.sadddd.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.saddddd.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.saddddddd.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.saddddddd1.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.ol.resources

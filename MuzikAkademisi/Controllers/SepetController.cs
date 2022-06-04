@@ -33,6 +33,9 @@ namespace MuzikAkademisi.Controllers
             return RedirectToAction("Index");
         }
 
+
+
+        //Kurs ekleme alanı
         public ActionResult Ekle(int id)
         {
 
@@ -41,7 +44,6 @@ namespace MuzikAkademisi.Controllers
 
             Kurs kurss = db.Kurs.Find(id);
             sepet.KursId = kurss.KursId;
-            sepet.MuzikAletiId = 1;
             sepet.UyeId = uyeId;
 
             db.Sepet.Add(sepet);
@@ -50,6 +52,10 @@ namespace MuzikAkademisi.Controllers
             return RedirectToAction("Index");
         }
         //login olan üyeden al
+
+
+
+        //Müzik aleti ekleme alanı
         public ActionResult Ekle2(int id)
         {
           
@@ -59,9 +65,7 @@ namespace MuzikAkademisi.Controllers
 
             MuzikAleti muzik = db.MuzikAleti.Find(id);
             sepet.MuzikAletiId = muzik.MuzikAletiId;
-            sepet.KursId = 7;
             sepet.UyeId = uyeId;
-
             db.Sepet.Add(sepet);
             db.SaveChanges();
 
