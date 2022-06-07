@@ -30,3 +30,7 @@ C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\De
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.saddddddd.resources
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.saddddddd1.resources
 C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.ol.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.video.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.durum.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.contextekle.resources
+C:\Users\Pc\Desktop\MuzikAkademisi\MuzikAkademisi\MuzikAkademisi.Entities\obj\Debug\MuzikAkademisi.Entities.Migrations.type.resources

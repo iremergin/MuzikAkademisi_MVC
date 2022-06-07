@@ -139,6 +139,7 @@
     <Compile Include="Controllers\ProgramCizelgesiController.cs" />
     <Compile Include="Controllers\SepetController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -206,10 +207,14 @@
     <Content Include="Views\Odev\Ekle.cshtml" />
     <Content Include="Views\Odev\Guncelle.cshtml" />
     <Content Include="Views\Odev\Listele.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Video\Ekle.cshtml" />
+    <Content Include="Views\Video\Guncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Videos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

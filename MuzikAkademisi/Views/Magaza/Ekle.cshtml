@@ -30,7 +30,7 @@
     @using (Html.BeginForm("Ekle", "Magaza", FormMethod.Post))
     {
        
-        @Html.Label("Müzik Aleti Id ")
+        @Html.Label("Müzik Aleti Id: ")
         @Html.TextBoxFor(x => x.MuzikAletiId, new { @class = "form-control" ,@readonly ="readonly" })
         <br />
         <br />

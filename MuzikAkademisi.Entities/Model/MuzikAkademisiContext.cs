@@ -44,6 +44,7 @@ namespace MuzikAkademisi.Entities.Model
             modelBuilder.Configurations.Add(new UyeMuzikAletiKursMap());
             modelBuilder.Configurations.Add(new OdemeKursMuzikAletiMap());
             modelBuilder.Configurations.Add(new YuklenenOdevlerMap());
+            modelBuilder.Configurations.Add(new VideoMap());
 
         }
 
@@ -73,6 +74,7 @@ namespace MuzikAkademisi.Entities.Model
         public DbSet<OdemeKursMuzikAleti> OdemeKursMuzikAleti{ get; set; }
 
         public DbSet<YuklenenOdevler> YuklenenOdevler { get; set; }
+        public DbSet<Video> Video { get; set; }
 
 
 

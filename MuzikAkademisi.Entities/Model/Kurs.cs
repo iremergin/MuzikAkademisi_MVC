@@ -28,12 +28,15 @@ namespace MuzikAkademisi.Entities.Model
         public decimal OgrenciIlerlemeSeviyesi { get; set; }
         public int KursKatilimciSayisi { get; set; }
         public bool KursDurumu { get; set; }
-        public int EgitmenId { get; set; }
+
+        //TODO: Kullanıcıyı eğitmen ve öğrenci olarak ayır.
+        //public int EgitmenId { get; set; }
         //public Uye Egitmen { get; set; }
 
      
         public virtual ICollection<Sepet> Sepets { get; set; }
         public virtual ICollection<ProgramCizelgesi> ProgramCizelgesis { get; set; }
+        public virtual ICollection<Video> Videos { get; set; }
 
 
 

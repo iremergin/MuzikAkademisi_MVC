@@ -30,7 +30,7 @@
     <div style="width:350px; height:350px; margin:70px 10px;">
     @using (Html.BeginForm("Ekle", "Home", FormMethod.Post))
     {
-        @Html.Label("Duyuru Id ")
+        @Html.Label("Duyuru Id: ")
         @Html.TextBoxFor(x => x.DuyuruId, new { @class = "form-control" ,@readonly ="readonly" })
         <br />
         <br />

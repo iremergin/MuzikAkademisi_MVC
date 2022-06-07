@@ -1,0 +1,62 @@
+﻿@using MuzikAkademisi.Entities.Model
+@model Video
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
+}
+<html>
+<head>
+    <style>
+        #button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 230px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div style="width:350px; height:350px; background-color:palevioletred; margin:20px 20px; ">
+    <div style="text-align:center; margin-top:50px;" ><b>Bilgileri Güncelleyiniz...</b></div>
+ 
+    <br />
+    <div style="width:350px; height:350px; margin:70px 10px;">
+    @using (Html.BeginForm("Guncelle", "Video", FormMethod.Post))
+    {
+        @Html.Label("Video Id: ")
+        @Html.TextBoxFor(x => x.VideoId, new { @class = "form-control" ,@readonly ="readonly" })
+        <br />
+        <br />
+        @Html.Label("Video Bölümü: ")
+        @Html.TextBoxFor(m => m.VideoBolum, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Video Konusu: ")
+        @Html.TextBoxFor(x => x.VideoKonu, new { @class = "form-control"})
+        <br />
+        <br />
+        
+        @Html.Label("Video Adı: ")
+        @Html.TextBoxFor(x => x.VideoAdi, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Video Path: ")
+        @Html.TextBoxFor(x => x.VideoPath, new { @class = "form-control" })
+        <br />
+        <br />
+        @Html.Label("Kurs Id: ")
+        @Html.TextBoxFor(x => x.KursId, new { @class = "form-control" })
+        <br />
+        <button id="button"> <b>Güncelle</b></button>
+    }
+        </div>
+</div>
+ </body>
+</html>
+

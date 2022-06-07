@@ -1,0 +1,55 @@
+﻿@using MuzikAkademisi.Entities.Model
+@model List<Video>
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnasayfaLayout.cshtml"; }
+
+
+<html>
+<head>
+    <style>
+        #ekle {
+            background-color: palevioletred;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 5px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <a id="ekle" class="btn" href="/Video/Ekle/">Video Ekle</a>
+    <a id="ekle" class="btn" href="/Video/Sil/">Video Sil</a>
+    <a id="ekle" class="btn" href="/Video/Guncelle/">Video Güncelle</a>
+     <div style="width:0px; height:0px;">
+        <video id="videoplayer" src="@Url.Content(Session["Path"].ToString())" controls width="900" height="500" loop style="margin:100px 200px;"> </video>
+    </div>
+
+        <div class="container" style="width:600px; height:1000px; float:right; background-color:white; border:solid; border-radius:5px;">
+            <div style="width: 600px; height: 70px; background-color: palevioletred; text-align: center; font-size: 20px; margin-bottom:10px;"><b>~VİDEOLAR~</b></div>
+
+            @foreach (var video in Model)
+            {
+    <a href="~/Video/VideoOynat/@video.VideoId" style="text-decoration: none; border-radius: 5px;">
+        <div style="width:600px; height:70px; background-color:palevioletred; color:black; text-align:center; text-transform:uppercase; ">
+            <p><b>@video.VideoBolum</b></p>
+            <p><b>@video.VideoKonu</b></p>
+
+
+
+        </div>
+    </a>}
+
+
+        </div>
+
+   
+  
+</body>
+</html>
