@@ -20,24 +20,81 @@
             border-style: solid;
             border-radius: 10px;
         }
+        
+        
     </style>
+
+     <script>
+/*const { Alert } = require("bootstrap");*/
+
+
+
+        window.onload = function gizle() {
+            var bilgiYetki = document.getElementById("yetkiBilgi").value;
+            var buton = document.getElementsByClassName("btn");
+            var arrFromsList = Array.prototype.slice.call(buton);
+
+            if ( bilgiYetki == "O") {
+
+             
+
+                for (var i = 0; i <= arrFromsList.length; i++) {
+
+                    arrFromsList[i].style.display = "none";
+
+                }
+
+
+
+                if (bilgiYetki == "E") {
+
+                    document.getElementsByClassName("btn2").style.display = "display";
+                }
+
+                else {
+
+                    document.getElementsByClassName("btn2").style.display = "none";
+                }
+                alert("Kullanıcı sisteme giriş yaptı.");
+            }
+            else {
+
+                alert("Admin sisteme giriş yaptı.");
+
+
+            };
+
+
+        }
+
+    </script>
 </head>
 <body>
 
     <a id="ekle" class="btn" href="/Video/Ekle/">Video Ekle</a>
-    <a id="ekle" class="btn" href="/Video/Sil/">Video Sil</a>
-    <a id="ekle" class="btn" href="/Video/Guncelle/">Video Güncelle</a>
+    <a id="ekle" class="btn" href="/Video/Sil/@Session["VideoId"]">Video Sil</a>
+    <a id="ekle" class="btn" href="/Video/Guncelle/@Session["VideoId"]">Video Güncelle</a>
+
+    @Session["Hata"]
+    
+    @if(ViewBag.VideoPath == null)
+    {
+        ViewBag.VideoPath = " ";
+    }
+
      <div style="width:0px; height:0px;">
-        <video id="videoplayer" src="@Url.Content(Session["Path"].ToString())" controls width="900" height="500" loop style="margin:100px 200px;"> </video>
+        <video id="videoplayer" src="@Url.Content(ViewBag.VideoPath)" controls width="900" height="500" loop style="margin:100px 200px;"> </video>
     </div>
 
-        <div class="container" style="width:600px; height:1000px; float:right; background-color:white; border:solid; border-radius:5px;">
-            <div style="width: 600px; height: 70px; background-color: palevioletred; text-align: center; font-size: 20px; margin-bottom:10px;"><b>~VİDEOLAR~</b></div>
+        <div class="container" style="width: 600px; height: 1000px; float: right; background-color: white; border: solid; border-radius: 5px; margin-top: 5px;">
+            <div style=" width: 600px; height: 70px; background-color: palevioletred; text-align: center; font-size: 20px; margin-bottom:10px;"><b>~VİDEOLAR~</b></div>
 
-            @foreach (var video in Model)
+            @try
             {
-    <a href="~/Video/VideoOynat/@video.VideoId" style="text-decoration: none; border-radius: 5px;">
-        <div style="width:600px; height:70px; background-color:palevioletred; color:black; text-align:center; text-transform:uppercase; ">
+                  foreach (var video in Model)
+            {
+    <a href="~/Video/VideoOynat/@video.VideoId" style=" text-decoration: none; border-radius: 5px;" >
+        <div class="kurs" style="width:600px; height:70px; background-color:palevioletred; color:black; text-align:center; text-transform:uppercase; ">
             <p><b>@video.VideoBolum</b></p>
             <p><b>@video.VideoKonu</b></p>
 
@@ -45,11 +102,19 @@
 
         </div>
     </a>}
+            }
+            catch 
+            {
 
+               
+            }
+
+          
+            
 
         </div>
 
-   
+        <button style="display:none;" id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
   
 </body>
 </html>

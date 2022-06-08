@@ -17,6 +17,6 @@ namespace MuzikAkademisi.Entities.Model
         public DateTime OdevTeslimTarihi { get; set; }
         public bool OdevDurumu{ get; set; }
 
-        //TODO: KursId ekle -> ödevin hangi kursa ait olduğunu belirtecek
+        
     }
 }

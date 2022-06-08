@@ -25,48 +25,79 @@
         }
     </style>
 
+    <script>/*const { Alert } = require("bootstrap");*/
+
+
+
+        window.onload = function gizle() {
+            var bilgiYetki = document.getElementById("yetkiBilgi").value;
+            var buton = document.getElementsByClassName("btn");
+            var arrFromsList = Array.prototype.slice.call(buton);
+
+            if (bilgiYetki == "O") {
+
+
+                for (var i = 0; i <= arrFromsList.length; i++) {
+
+                    arrFromsList[i].style.display = "none";
+
+                }
+                alert("Kullanıcı sisteme giriş yaptı.")
+            }
+            else {
+
+                Alert("Admin sisteme giriş yaptı.")
+
+
+            };
+
+
+        }</script>
 </head>
 <body>
 
-     <a id="ekle" class="btn" href="~/Odev/Listele/@ViewBag.OdevId">Ödevleri Listele</a>
+    <a id="ekle" class="btn" href="~/Odev/Listele/@ViewBag.OdevId">Ödevleri Listele</a>
     <div style="width:1860px; height:800px; ">
-    <div style="width: 1860px; height: 800px; background-color: palevioletred; margin: 20px; border-style: solid; font-family:Cambria; font-size:20px; ">
-        <div style="width: 1000px; height: 300px; display: flex; justify-content: center; flex-wrap: wrap; "><div><img src="@ViewBag.OdevResim" width="500px" height="300px" /></div>
-        <div style="margin-left: 100px;  ">
-        <p><b> ÖDEV ADI:</b> @ViewBag.OdevAdi</p>
-        <p><b>NOT:</b> @ViewBag.Not</p>
-        <p><b>VERİLME TARİHİ:</b> @ViewBag.OdevVerilmeTarihi</p>
-        <p><b>TESLİM TARİHİ:</b> @ViewBag.OdevTeslimTarihi</p>
-             <p><b>DOSYA YOLU: </b>@ViewBag.dosyaYolu </p>
+        <div style="width: 1860px; height: 800px; background-color: palevioletred; margin: 20px; border-style: solid; font-family:Cambria; font-size:20px; ">
+            <div style="width: 1000px; height: 300px; display: flex; justify-content: center; flex-wrap: wrap; ">
+                <div><img src="@ViewBag.OdevResim" width="500px" height="300px" /></div>
+                <div style="margin-left: 100px;  ">
+                    <p><b> ÖDEV ADI:</b> @ViewBag.OdevAdi</p>
+                    <p><b>NOT:</b> @ViewBag.Not</p>
+                    <p><b>VERİLME TARİHİ:</b> @ViewBag.OdevVerilmeTarihi</p>
+                    <p><b>TESLİM TARİHİ:</b> @ViewBag.OdevTeslimTarihi</p>
+                    <p><b>DOSYA YOLU: </b>@ViewBag.dosyaYolu </p>
 
+                </div>
+
+
+
+
+
+
+            </div>
+            <div>
+                @using (Html.BeginForm("OdevYukleme", "Odev", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+    <p><b>Ödev Yükle:</b> <input type="file" name="person" /></p>
+
+                    <p>@Session["Mesaj"].ToString() @ViewBag.Mesaj <img src=@ViewBag.Tik width="30px" height="30px" /></p>
+
+                                    <div>
+                                        <p>
+                                            <button style="width: 100px; height: 50px; margin-right: 5px; margin-left: 10px; background-color: azure; color: palevioletred; border-radius: 10px; border-color: palevioletred;"><b>KAYDET</b></button>
+
+
+                                            <a href="/Odev/odevIndir" style="text-decoration:none;"> <button disabled="disabled" style=" width: 100px; height: 50px; margin-right: 5px; margin-left: 10px; background-color:azure; color: palevioletred; border-radius: 10px; border-color:palevioletred;"><b>İNDİR</b></button></a>
+                                        </p>
+                                    </div>  }
+            </div>
         </div>
-       
-
-    
-  
-        
-        
-        </div>
-        <div>
-            @using (Html.BeginForm("OdevYukleme", "Odev", FormMethod.Post, new { enctype = "multipart/form-data" }))
-            {
-        <p><b>Ödev Yükle:</b> <input type="file" name="person" /></p>
-
-      <p>@Session["Mesaj"].ToString() @ViewBag.Mesaj <img src=@ViewBag.Tik width="30px" height="30px" /></p>
-
-         <div><p>
-    <button style="width: 100px; height: 50px; margin-right: 5px; margin-left: 10px; background-color: azure; color: palevioletred; border-radius: 10px; border-color: palevioletred;"><b>KAYDET</b></button>
 
 
-    <a href="/Odev/odevIndir" style="text-decoration:none;"> <button disabled="disabled" style=" width: 100px; height: 50px; margin-right: 5px; margin-left: 10px; background-color:azure; color: palevioletred; border-radius: 10px; border-color:palevioletred;"><b>İNDİR</b></button></a>
-</p></div> }
-        </div>
+
     </div>
-
-
-
-    </div>
-
+    <button style="display:none;" id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
 </body>
 </html>
 

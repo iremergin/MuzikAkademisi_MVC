@@ -58,13 +58,26 @@
             var buton = document.getElementsByClassName("btn");
             var arrFromsList = Array.prototype.slice.call(buton);
 
-            if (bilgiYetki == "K") {
+            if (bilgiYetki == "E" || bilgiYetki == "O") {
 
+             
 
                 for (var i = 0; i <= arrFromsList.length; i++) {
 
                     arrFromsList[i].style.display = "none";
 
+                }
+
+
+
+                if (bilgiYetki == "E") {
+
+                    document.getElementsByClassName("btn2").style.display = "display";
+                }
+
+                else {
+
+                    document.getElementsByClassName("btn2").style.display = "none";
                 }
                 alert("Kullanıcı sisteme giriş yaptı.");
             }
@@ -96,14 +109,14 @@
         <div style="width:400px; height:200px; margin-top:40px; ">
             <a id="btn" class="btn" href="/Kurs/Sil/@krs.KursId"> Sil </a>
             <a id="btn" class="btn" href="/Kurs/Guncelle/@krs.KursId"> Güncelle </a>
-            <a id="btn" class="btn" href="/Uye/Index/@krs.KursId"> Üye Listele </a>
+            <a id="btn" class="btn2" href="/Uye/Index/@krs.KursId"> Üye Listele </a>
             <a id="btn" href="/Sepet/Ekle/@krs.KursId"> Sepete Ekle</a>
         </div>
 
     </div>
         </div>
     </div>}
-  <button style="display:none" ; id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
+  <button style="display:none;"  id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
         </div>
                  
 </body>

@@ -16,8 +16,9 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 10px 230px;
+            margin: 0px 225px;
             border-radius: 10px;
+            border-style: solid;
         }
     </style>
 </head>
@@ -50,9 +51,7 @@
         @Html.TextBoxFor(x => x.VideoPath, new { @class = "form-control" })
         <br />
         <br />
-        @Html.Label("Kurs Id: ")
-        @Html.TextBoxFor(x => x.KursId, new { @class = "form-control" })
-        <br />
+    
         <button id="button"> <b>Güncelle</b></button>
     }
         </div>

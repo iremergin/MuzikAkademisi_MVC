@@ -12,14 +12,28 @@ namespace MuzikAkademisi.Controllers
     {
         MuzikAkademisiContext db = new MuzikAkademisiContext();
         // GET: Video
-        public ActionResult Index()
+        public ActionResult Index(int id, string path)
         {
-            if (Session["Path"] == null)
+           
+            try
             {
-                Session["Path"] = " ";
+                Session["KursId"] = id;
+                ViewBag.VideoPath = path;
+                var video = db.Video.Where(x => x.KursId == id).ToList();
+                if (path == null)
+                {
+                    ViewBag.VideoPath = video[0].VideoPath;
+                }
+               
+                return View(video.ToList());
             }
-            var video = db.Video.AsNoTracking();
-            return View(video.ToList());
+            catch 
+            {
+                var video = db.Video.Where(x => x.KursId == id).ToList();
+                
+                return View(video.ToList());
+            }
+       
         }
 
 
@@ -32,12 +46,13 @@ namespace MuzikAkademisi.Controllers
         [HttpPost]
         public ActionResult Ekle(Video pVideo)
         {
+
             Video video = new Video();
             video.VideoDurumu = true;
             video.VideoAdi = pVideo.VideoAdi;
             video.VideoBolum = pVideo.VideoBolum;
             video.VideoKonu = pVideo.VideoKonu;
-            video.KursId = pVideo.KursId;
+            pVideo.KursId = Convert.ToInt32(Session["KursId"]);
 
 
 
@@ -56,46 +71,91 @@ namespace MuzikAkademisi.Controllers
             db.SaveChanges();
 
             
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Video", new { id = pVideo.KursId });
         }
 
         public ActionResult Sil(int id)
         {
-            Video video = db.Video.Find(id);
-            db.Video.Remove(video);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                Video video = db.Video.Find(id);
+                db.Video.Remove(video);
+                db.SaveChanges();
+                int KursId = Convert.ToInt32(Session["KursId"]);
+
+                return RedirectToAction("Index", "Video", new { id = KursId });
+            }
+            catch 
+            {
+                int KursId = Convert.ToInt32(Session["KursId"]);
+                ViewBag.Hata = "Silmek istediğiniz dersi seçiniz !";
+                return RedirectToAction("Index", "Video", new { id = KursId, ViewBag.Hata }) ;
+            }
         }
 
         [HttpGet]
         public ActionResult Guncelle(int id)
         {
-            Video video = db.Video.Find(id);
+            if (Convert.ToInt32( Session["VideoId"] ) == 0)
+            {
+                int KursId = Convert.ToInt32(Session["KursId"]);
+                Session["Hata"] = "Güncellemek istediğiniz dersi seçiniz !";
+                return RedirectToAction("Index", "Video", new { id = KursId });
+            }
+            try
+            {
+                Video video = db.Video.Find(id);
+                Session["VideoId"] = 0;
+                Session["Hata"] = " ";
 
-            return View(video);
+                return View(video);
+            }
+            catch 
+            {
+
+                int KursId = Convert.ToInt32(Session["KursId"]);
+                ViewBag.Hata = "Güncellemek istediğiniz dersi seçiniz !";
+                return RedirectToAction("Index", "Video", new { id = KursId, ViewBag.Hata });
+            }
+            
         }
 
 
         [HttpPost]
         public ActionResult Guncelle(Video pVideo)
         {
-            Video video = db.Video.Find(pVideo.VideoId);
-            video.VideoAdi = pVideo.VideoAdi;
-            video.VideoBolum = pVideo.VideoBolum;
-            video.VideoKonu = pVideo.VideoKonu;
-            video.VideoPath = pVideo.VideoPath;
-            video.KursId = pVideo.KursId;
-            video.VideoDurumu = true;
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                Video video = db.Video.Find(pVideo.VideoId);
+                video.VideoAdi = pVideo.VideoAdi;
+                video.VideoBolum = pVideo.VideoBolum;
+                video.VideoKonu = pVideo.VideoKonu;
+                video.VideoPath = pVideo.VideoPath;
+                pVideo.KursId = Convert.ToInt32(Session["KursId"]);
+                video.VideoDurumu = true;
+                db.SaveChanges();
+                int KursId = Convert.ToInt32(Session["KursId"]);
+                Session["VideoId"] = 0;
+                return RedirectToAction("Index", "Video", new { id = KursId, path = video.VideoPath });
+            }
+            catch 
+            {
+                int KursId = Convert.ToInt32(Session["KursId"]);
+                ViewBag.Hata = "Güncellemek istediğiniz dersi seçiniz !";
+                return RedirectToAction("Index", "Video", new { id = KursId, ViewBag.Hata });
+            }
         }
 
         public ActionResult VideoOynat (int id)
         {
-            Video video = db.Video.Find(id);
-            Session["Path"] = video.VideoPath;
 
-            return RedirectToAction("Index");
+            Video video = db.Video.Find(id);
+
+            Session["VideoId"] = video.VideoId;
+
+            int KursId = Convert.ToInt32( Session["KursId"] );
+
+            return RedirectToAction("Index", "Video", new { id = KursId, path = video.VideoPath });
         }
 
     }

@@ -29,7 +29,7 @@ namespace MuzikAkademisi.Entities.Model
         public int KursKatilimciSayisi { get; set; }
         public bool KursDurumu { get; set; }
 
-        //TODO: Kullanıcıyı eğitmen ve öğrenci olarak ayır.
+      
         //public int EgitmenId { get; set; }
         //public Uye Egitmen { get; set; }
 
