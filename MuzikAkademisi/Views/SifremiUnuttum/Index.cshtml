@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
 
@@ -62,29 +63,23 @@ label{
 <body>
 
     <div id="signin">
-        <form action="/Login/GirisYap/" method="post">
-            <div class="form-title">~LOGIN~</div>
+        <form action="/SifremiUnuttum/Index/" method="post">
+            <div class="form-title">~ŞİFREMİ UNUTTUM~</div>
             <div class="input-field">
                 <input type="email" name="UyeMail" id="email" autocomplete="off" />
                 <i class="material-icons"></i>
                 <label for="email">KULLANICI MAİL</label>
             </div>
-            <div class="input-field">
-                <input type="password" name="UyeSifre" id="password" />
-                <i class="material-icons"></i>
-                <label for="password">ŞİFRE</label>
-            </div>
-            <a href="/SifremiUnuttum/Index/" class="forgot-pw">ŞİFREMİ UNUTTUM</a>
-            <a href="/KayitOl/Index" class="forgot-pw">KAYIT OL|</a>
-            <button type="submit" class="login"><b>GİRİŞ YAP</b></button>
+            <button type="submit" class="login"><b>ŞİFRE YENİLE</b></button>
             <div class="check">
                 <i class="material-icons">check</i>
             </div>
         </form>
+        <b>@ViewBag.Mesaj</b>
 
 
     </div>
-    @ViewBag.Message
+    
 
     <div id="gif">
         <a href="https://dribbble.com/shots/2197140-New-Material-Text-Fields">
