@@ -126,17 +126,17 @@ namespace MuzikAkademisi.Controllers
         {
             try
             {
+                
                 Video video = db.Video.Find(pVideo.VideoId);
                 video.VideoAdi = pVideo.VideoAdi;
                 video.VideoBolum = pVideo.VideoBolum;
                 video.VideoKonu = pVideo.VideoKonu;
-                video.VideoPath = pVideo.VideoPath;
                 pVideo.KursId = Convert.ToInt32(Session["KursId"]);
                 video.VideoDurumu = true;
                 db.SaveChanges();
                 int KursId = Convert.ToInt32(Session["KursId"]);
                 Session["VideoId"] = 0;
-                return RedirectToAction("Index", "Video", new { id = KursId, path = video.VideoPath });
+                return RedirectToAction("Index", "Video", new { id = KursId});
             }
             catch 
             {

@@ -9,11 +9,8 @@ namespace MuzikAkademisi.Controllers
 {
     public class MagazaController : Controller
     {
-
         MuzikAkademisiContext db = new MuzikAkademisiContext();
         // GET: Magaza
-     
-
         [HttpGet]
         public ActionResult Ekle()
         {
@@ -60,7 +57,6 @@ namespace MuzikAkademisi.Controllers
             return RedirectToAction("Index");
         }
 
-
         [AllowAnonymous]
         public ActionResult Index()
         {
@@ -68,9 +64,5 @@ namespace MuzikAkademisi.Controllers
 
             return View(muzikAletleri.ToList());
         }
-    
-
     }
-
-
 }

@@ -16,13 +16,9 @@ namespace MuzikAkademisi.Controllers
         {
             string kId = @Session["UyeId"].ToString();
             int kullaiciId = Convert.ToInt32(kId);
-
             UyeMuzikAletiKurs uma = new UyeMuzikAletiKurs();
-            
-            var profil = db.UyeMuzikAletiKurs.AsNoTracking().Where(x => x.UyeId==kullaiciId);
-          
+            var profil = db.UyeMuzikAletiKurs.AsNoTracking().Where(x => x.UyeId==kullaiciId);       
             return View(profil.ToList());
-      
         }
         public ActionResult Sil(int id)
         {
@@ -31,25 +27,18 @@ namespace MuzikAkademisi.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-
         public ActionResult Ekle(int id)
         {
             UyeMuzikAletiKurs uma = new UyeMuzikAletiKurs();
             string kId = @Session["UyeId"].ToString();
             int kullaiciId = Convert.ToInt32(kId);
-
             Kurs kurss = db.Kurs.Find(id);
-            uma.KursId = kurss.KursId;
-            
+            uma.KursId = kurss.KursId;     
             uma.UyeId = kullaiciId;
             db.UyeMuzikAletiKurs.Add(uma);
             db.SaveChanges();
-
             return RedirectToAction("Index");
         }
-
-
         public ActionResult Ekle2(int id)
         {
             UyeMuzikAletiKurs uma = new UyeMuzikAletiKurs();
@@ -58,11 +47,9 @@ namespace MuzikAkademisi.Controllers
 
             MuzikAleti mzkAlet = db.MuzikAleti.Find(id);
             uma.MuzikAletiId = mzkAlet.MuzikAletiId;
-
             uma.UyeId = kullaiciId;
             db.UyeMuzikAletiKurs.Add(uma);
             db.SaveChanges();
-
             return RedirectToAction("Index");
         }
     }

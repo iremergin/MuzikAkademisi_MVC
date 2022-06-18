@@ -20,7 +20,6 @@
             margin-left: 3px;
             border-style: solid;
         }
-
         #ekle {
             background-color: palevioletred;
             border: none;
@@ -35,7 +34,6 @@
             border-style: solid;
             border-radius: 10px;
         }
-
         .kapsayici {
             margin-top: 100px;
             width: auto;
@@ -47,50 +45,30 @@
            
         }
     </style>
-
     <script>
 /*const { Alert } = require("bootstrap");*/
-
-
-
         window.onload = function gizle() {
             var bilgiYetki = document.getElementById("yetkiBilgi").value;
             var buton = document.getElementsByClassName("btn");
             var arrFromsList = Array.prototype.slice.call(buton);
 
             if (bilgiYetki == "E" || bilgiYetki == "O") {
-
-             
-
                 for (var i = 0; i <= arrFromsList.length; i++) {
-
                     arrFromsList[i].style.display = "none";
-
                 }
-
-
-
                 if (bilgiYetki == "E") {
-
                     document.getElementsByClassName("btn2").style.display = "display";
                 }
-
                 else {
-
                     document.getElementsByClassName("btn2").style.display = "none";
                 }
                 alert("Kullanıcı sisteme giriş yaptı.");
             }
             else {
-
                 alert("Admin sisteme giriş yaptı.");
 
-
             };
-
-
         }
-
     </script>
 </head>
 <body>
@@ -112,13 +90,11 @@
             <a id="btn" class="btn2" href="/Uye/Index/@krs.KursId"> Üye Listele </a>
             <a id="btn" href="/Sepet/Ekle/@krs.KursId"> Sepete Ekle</a>
         </div>
-
     </div>
         </div>
     </div>}
   <button style="display:none;"  id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
-        </div>
-                 
+        </div>            
 </body>
 </html>
 

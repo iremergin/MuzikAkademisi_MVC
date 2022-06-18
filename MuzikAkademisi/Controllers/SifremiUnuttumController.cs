@@ -31,31 +31,12 @@ namespace MuzikAkademisi.Controllers
                 }
                 else if (uye.UyeMail != null)
                 {
-
-
-
                 ViewBag.Mesaj = "Mail Adresiniz Kayıtlı Değil!";
-
-
-
                 }
-
-
-
                 else {
-
-
                 }
-
                 return View();
-
-
-
-
-
                 }
-
-
 
                 public class Mail
                 {
@@ -64,16 +45,12 @@ namespace MuzikAkademisi.Controllers
                 try
                 {
 
-
-
-
                 MailMessage mail = new MailMessage();
                 SmtpClient smtp = new SmtpClient();
                 smtp.Credentials = new NetworkCredential("akademimuzikss@gmail.com", "icxqgbpmcpzeduwk");
                 smtp.Port = 587;
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
-
 
 
                 mail.IsBodyHtml = true;
@@ -84,30 +61,16 @@ namespace MuzikAkademisi.Controllers
                 mail.Body = "<b>Merhaha" + " "+name+" "+surname+" "+"şifreniz"+" </b>"+"<i>"+sifre+"</i>";
                 smtp.Send(mail);
 
-
-
                 return "Şifreniz kayıtlı olan e-mail adresinize gönderildi!";
 
-
-
                 }
-
-
 
                 catch
                 {
                 return "Sistemsel bir hata oluştur lütfen daha sonra tekrar deneyin!";
 
                 }
-
-
-
-
+           }
                 }
-
-
-
-                }
-
-                    }
-                }
+    }
+}

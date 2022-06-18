@@ -4,7 +4,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AnasayfaLayout.cshtml";
 }
-
 <html>
 <head>
     <style>
@@ -20,41 +19,32 @@
     </style>
 </head>
 <body>
-
     <div style="margin:50px 50px; font-size:20px;"><b>~AKTİF OLARAK ALINAN KURSLAR~</b></div>
     <div class="kapsayici">
         @foreach (var krs in Model)
         {
             try
             {
-
                 if (krs.KursId > 0) { 
              <div class="container" style="width: 500px; height: 500px;  ">
 <div style="width:400px; height:400px; ">
     <a href="/Video/Index/@krs.KursId" style="color:black; text-decoration:none;"><div style="width: 400px; height: 350px; background-color: palevioletred; margin: 20px 20px; border-style: solid; border-radius:20px;">
     <img src="@krs.Kurs.KursFotograf" style="width: 400px; height: 150px; border-radius: 17px;" />
     <p><b>KURS ADI: @krs.Kurs.KursAdi</b></p>
-
-
 </div></a>
 </div>
      </div>
                 }
             }
-
             catch {
-
 
             }
         }
-
     </div>
-
     <div style="margin:50px 50px; font-size:20px;"><b>~ ALINAN MÜZİK ALETLERİ~</b></div>
     <div class="kapsayici">
         @foreach (var mzk in Model)
         {
-
             try
             {
                 if (mzk.MuzikAletiId > 0)
@@ -64,25 +54,15 @@
             <div style="width: 400px; height: 400px; background-color: palevioletred; margin: 20px 20px; border-style: solid; border-radius: 20px;">
                <img src="@mzk.MuzikAleti.MuzikAletiFotograf" style="width: 400px; height: 150px; border-radius: 17px;" />
                 <p><b> @mzk.MuzikAleti.MuzikAletiAciklama</b></p>
-
-
             </div>
         </div>
     </div>
-
-                }
+               }
             }
-
-            catch { 
-            
-            
+            catch {            
             }
         }
     </div>
-
-
-
-
         </body>
 </html>
 

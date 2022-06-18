@@ -7,9 +7,12 @@ using System.Web.Mvc;
 
 namespace MuzikAkademisi.Controllers
 {
+    [AllowAnonymous]
     public class KayitOlController : Controller
     {
-        [AllowAnonymous]
+
+        MuzikAkademisiContext db = new MuzikAkademisiContext();
+       
         // GET: KayitOl
         public ActionResult Index()
         {
@@ -25,17 +28,15 @@ namespace MuzikAkademisi.Controllers
         [HttpPost]
         public ActionResult Kayit(Uye pUye)
         {
-            using (MuzikAkademisiContext db = new MuzikAkademisiContext())
-            {
-               
+          
                 db.Uye.Add(pUye);
                 db.SaveChanges();
                 Session["UyeId"] = pUye.UyeId;
                 return RedirectToAction("Index","Home");
             
             
-            }
-            return RedirectToAction("Index");
+            
+           
         }
     }
 }

@@ -61,6 +61,6 @@ namespace MuzikAkademisi.Controllers
             return RedirectToAction("Index");
         }
 
-        //TODO: Slider Ekle
+        
     }
 }

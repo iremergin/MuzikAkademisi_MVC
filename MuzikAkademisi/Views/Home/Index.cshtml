@@ -7,7 +7,6 @@
 <head>
     <link rel=”stylesheet” type=”text/css” href=”style.css” />
     <style>
-
         #ekle {
             background-color: palevioletred;
             border: none;
@@ -31,25 +30,17 @@
             display: inline-block;
             font-size: 16px;
             border-radius: 10px;
-         
-
         }
     </style>
-
-
     <script>
 /*const { Alert } = require("bootstrap");*/
-
-
-
         window.onload = function gizle() {
             var bilgiYetki = document.getElementById("yetkiBilgi").value;
             var buton = document.getElementsByClassName("btn");
             var arrFromsList = Array.prototype.slice.call(buton);
             
             if (bilgiYetki == "E" || bilgiYetki == 'O' ) {
-                
-               
+                               
                 for (var i = 0; i <= arrFromsList.length; i++) {
 
                     arrFromsList[i].style.display = "none";
@@ -60,26 +51,17 @@
             else {
 
                 alert("Admin sisteme giriş yaptı.");
-
-                
-            };
-
-            
+  
+            };   
         }
-
     </script>
 </head>
-<body style="margin:0; padding:0;">
-
-    
+<body style="margin:0; padding:0;">    
     <!--fotoğraf-->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" style="justify-content:flex-start; flex-wrap:wrap;">
             <div class="carousel-item active" style="margin-bottom:5px;">
                 <img src="~/Content/Multiple-Instruments.jpg" class="d-block w-100" alt="..." style="width:100%; height:800px; " />
-
-
-
             </div>
             <div><a id="ekle" style="margin: 50px 20px 0px 1550px;" href="/ProgramCizelgesi/Ekle/">Program Ekle</a></div>
             <div>
@@ -88,8 +70,6 @@
                     <div style="width: 400px; height: 50px; background-color: palevioletred; margin: 0px 20px 20px 50px; padding-top: 20px; text-align: center; font-size: 20px; border-radius: 10px; border-style:solid;"><b>DUYURULAR</b></div>
 
                     <button style="display:none" ; id="yetkiBilgi" value="@Session["yetki"].ToString()"></button>
-
-
                     @foreach (var dyr in Model.Duyuru)
                     {
 
@@ -103,12 +83,8 @@
         </div>}
                 </div>
             </div>
-
-
             <div>
                 <table style="text-align:center; width: 1000px; height: 500px; background-color: palevioletred; margin: -520px 180px auto auto; padding: 15px; border-radius: 10px; border-style: solid; border-color:black; padding-top:0px;">
-
-
 
                     <tr>
                         <th><a href="/Home/Index/Pazartesi" style="color:black; text-decoration:none; background-color:pink; padding:20px; border-radius:10px;"> PAZARTESİ @ViewBag.Message  </a></th>
@@ -119,15 +95,10 @@
                         <th><a href="/Home/Index/Cumartesi" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">CUMARTESİ</a></th>
                         <th><a href="/Home/Index/Pazar" style="color: black; text-decoration: none; background-color: pink; padding: 20px; border-radius: 10px; ">PAZAR</a></th>
 
-
                     </tr>
-
                     <tr>
-
                         @foreach (var et in Model.ProgramCizelgesi)
-
                         {
-
             <td style="font-size: 20px; background-color: pink; padding: 20px; border-radius: 10px; text-align: center; ">
                 <b>@et.Gun</b>
                 <br /> @et.Kurs.KursAdi
@@ -138,19 +109,9 @@
             </td>
 }
                     </tr>
-
-
-
-
-
-
                 </table>
-
             </div>
-
         </div>
         </div>
- 
-
 </body>
 </html>
